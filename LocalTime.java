@@ -8,6 +8,6 @@ public class LocalTime {
 
     public static void main(String[] args) {
         java.time.LocalTime whatTimeIs = java.time.LocalTime.now();
-        System.out.println("La hora del sistema es: " + whatTimeIs);
+        System.out.println("System local time is: " + whatTimeIs);
     } 
 }

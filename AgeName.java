@@ -14,13 +14,13 @@ public class AgeName {
         int age;
         Scanner keyboard = new Scanner(System.in);
         
-        System.out.println("Introduzca su edad: ");
+        System.out.println("Enter your age: ");
         age = keyboard.nextInt();
         keyboard.nextLine(); // limpio el buffer de teclado para evitar errores
-        System.out.println("Introduzca su nombre y apellidos: ");
+        System.out.println("Enter name and surname: ");
         name = keyboard.next();
         lastName = keyboard.nextLine();
-        System.out.println("Nombre: " + name +  "\nApellidos:" 
-                + lastName + "\nSu edad es: " + age);
+        System.out.println("Name: " + name +  "\nSurname:" 
+                + lastName + "\nAge: " + age + " years old.");
     }
 }
