@@ -11,7 +11,6 @@ public class CalculateVat {
     public static void main(String[] args) {
         double taxBase, vat, totalAmount, vatAmount;
         Scanner sc = new Scanner(System.in);
-        
         System.out.println("Insert the tax base: ");
         taxBase = sc.nextDouble();
         System.out.println("Insert VAT: ");
