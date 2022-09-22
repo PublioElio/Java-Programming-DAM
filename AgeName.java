@@ -3,8 +3,8 @@ package agename;
 import java.util.Scanner;
 
 /**
- * Este programa solicita la edad, nombre y apellidos 
- * por terminal al usuario y lo muestra por pantalla
+ * This program requests the user his age, name and surname, and prints the data
+ * on console 
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
 public class AgeName {
@@ -16,7 +16,7 @@ public class AgeName {
         
         System.out.println("Enter your age: ");
         age = keyboard.nextInt();
-        keyboard.nextLine(); // limpio el buffer de teclado para evitar errores
+        keyboard.nextLine(); // clearing the keyboard buffer to avoid errors
         System.out.println("Enter name and surname: ");
         name = keyboard.next();
         lastName = keyboard.nextLine();

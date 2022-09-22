@@ -1,7 +1,7 @@
 package localtime;
 
 /**
- * Este programa imprime por consola la hora local
+ * This program prints the local time by console
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
 public class LocalTime {
