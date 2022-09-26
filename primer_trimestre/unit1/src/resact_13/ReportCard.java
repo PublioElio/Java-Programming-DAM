@@ -18,8 +18,8 @@ public class ReportCard {
         rating2 = sc.nextInt();
         System.out.println("Enter califications for the third assessment: ");
         rating3 = sc.nextInt();
-        reportCard = (int)((rating1 + rating2 + rating3) / 3);
         academicRecord = (rating1 + rating2 + rating3) / 3.0;
+        reportCard = (int)academicRecord;
         System.out.println("-----------------------------------\n Report Card: " 
                 + reportCard + "\t\tAcademic Record: " + academicRecord);         
     }
