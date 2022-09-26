@@ -8,11 +8,11 @@ Ejercicios de programación en Java realizados en la asignatura de Programación
 ## Estructura de archivos
 Los ejercicios están divididos por trimestre. Dentro de cada trimeste, están separados por unidades (listadas más adelante). Dentro de cada carpeta de unidad hay un proyecto Java con varios packages, llamados de la siguiente manera:
 
--__resact__ *(resolved activity)*: actividades recueltas en el manual, normalmente son prácticas breves y simples que sirven para afianzar conceptos que se tratan en cada unidad. Es probable que la resolución del programa difiera de la presentada en el ejercicio del libro.
+- __resact__ *(resolved activity)*: actividades recueltas en el manual, normalmente son prácticas breves y simples que sirven para afianzar conceptos que se tratan en cada unidad. Es probable que la resolución del programa difiera de la presentada en el ejercicio del libro.
 
--__appact__ *(application activity)*: son ejercicios finales en cada una de las unidades, que no tienen solución en el manual y han de ser desarrollados por el estudiante. Son algo más complejos que las __resact__.
+- __appact__ *(application activity)*: son ejercicios finales en cada una de las unidades, que no tienen solución en el manual y han de ser desarrollados por el estudiante. Son algo más complejos que las __resact__.
 
--__actividades libres__: son ejercicios que no entran en ninguna de las categorías anteriores, pudiendo ser retos presentados en clase o iniciativas propias del alumno.
+- __actividades libres__: son ejercicios que no entran en ninguna de las categorías anteriores, pudiendo ser retos presentados en clase o iniciativas propias del alumno.
 
 ## Unidades
 A continuación, se enumeran las unidades del manual y los temas tratados en cada una.
