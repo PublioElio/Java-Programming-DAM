@@ -12,7 +12,7 @@ public class AbsoluteNumber {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a positive or negative number: ");
         num = sc.nextInt();
-        absoluteValue = num < 0 ? -1* num : num;
+        absoluteValue = num < 0 ? -1 * num : num;
 //      alternative solution: absoluteValue = Math.abs(num);
         System.out.println("The absolute value of " + num + " is: " 
                 + absoluteValue);
