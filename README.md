@@ -14,7 +14,11 @@ Los ejercicios están divididos por trimestre. Dentro de cada trimeste, están s
 
 - __actividades libres__: son ejercicios que no entran en ninguna de las categorías anteriores, pudiendo ser retos presentados en clase o iniciativas propias del alumno.
 
+<div id="units" align="center">
+  <img src="https://media.giphy.com/media/8NaYbrMzn9a4tu4z6i/giphy.gif" width="150"/>
+</div>
+
 ## Unidades
 A continuación, se enumeran las unidades del manual y los temas tratados en cada una.
 ### Unidad 1: conceptos básicos
-Ejercicios básicos para entender la sintaxis de Java, además de otros comunes para entender cualquier lenguaje de programación. Variables, distintos tipos de operadores, tipos primitivos (tamaños, rangos y conversiones), salida y entrada por consola, la API de java y una introducción a los métodos.
+Ejercicios básicos para entender la sintaxis de Java, además de otros conceptos comunes para entender cualquier lenguaje de programación. Variables, distintos tipos de operadores, tipos primitivos (tamaños, rangos y conversiones), salida y entrada por consola, la API de java y una breve introducción a los métodos.
