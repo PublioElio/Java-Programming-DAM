@@ -16,8 +16,11 @@ public class TimeCalculator {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter any number of seconds: ");
         sec = sc.nextInt();
-        min = sec / 60;
-        hours = min / 60;
+        
+        hours = sec / 3600;
+        min = (sec % 3600) / 60;
+        sec %= 60;
+
         System.out.printf("Total: %,.2f h. %,.2f min. %d sec.\n",
                 hours, min, sec);
     }
