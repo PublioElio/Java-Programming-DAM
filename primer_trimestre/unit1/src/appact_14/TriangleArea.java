@@ -16,7 +16,7 @@ public class TriangleArea {
        base = sc.nextInt();
        System.out.println("Enter height: ");
        height = sc.nextInt();
-       area = (double)(base * height) / 2;
+       area = (double)(base * height) / 2.0;
        System.out.printf("The area of the triangle is %,.1f\n", area);
    } 
 }
