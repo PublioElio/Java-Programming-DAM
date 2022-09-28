@@ -21,7 +21,7 @@ public class SecondGradePolynomial {
         System.out.println("Enter value of 'c':");
         c = sc.nextInt();
         System.out.println("Enter value of 'x':");
-        x = sc.nextInt();
+        x = sc.nextDouble();
         y = ((a * (x * x)) + (b * x) + c);
         System.out.println("The result of 'y = ax^2 + bx + c' is: " + y);
         System.out.println("""
