@@ -3,11 +3,13 @@ package appact_11;
 import java.util.Scanner;
 
 /**
- * This program calculates VAT over a tax base and shows total cost 
- * and VAT amount
+ * This program calculates VAT over a tax base and shows total cost and VAT
+ * amount
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class CalculateVat {
+
     public static void main(String[] args) {
         double taxBase, vat, totalAmount, vatAmount;
         Scanner sc = new Scanner(System.in);
@@ -23,5 +25,5 @@ public class CalculateVat {
                           Total cost with VAT: %,.2f \tTotal taxes: %,.2f
                           """, totalAmount, vatAmount);
     }
-    
+
 }
