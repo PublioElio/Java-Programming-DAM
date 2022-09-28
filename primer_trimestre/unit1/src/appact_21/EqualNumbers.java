@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 /**
  * This program asks for two numbers and returns true if both are the same
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class EqualNumbers {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         int num1, num2;
         boolean result;
         Scanner sc = new Scanner(System.in);
