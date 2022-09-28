@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 /**
  * This program calculates how much is needed to make 'n' multiple of seven, and
- * asks for a second imput (m) to calculate how much is needed to make 'n' 
+ * asks for a second imput (m) to calculate how much is needed to make 'n'
  * multiple of 'm'
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class MultipleOf {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         int n, m, dif;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
