@@ -23,7 +23,7 @@ public class DistanceCalculator {
         m = sc.nextInt();
         cm += (m * 100) + (mm / 10);
         System.out.printf("""
-                          Te total distance in centimeters is: %,.2f m.
+                          The total distance in centimeters is: %,.2f cm.
                           """, cm);
     }
 }
