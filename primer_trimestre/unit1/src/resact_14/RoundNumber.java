@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 /**
  * This program asks the user for a decimal number and rounds it
+ *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
 public class RoundNumber {
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         double num;
         long rounded;
         Scanner sc = new Scanner(System.in);
@@ -22,6 +23,6 @@ public class RoundNumber {
         num += 0.5;
         System.out.println("\nAlternative solution:\n"
                 + "----------------------------------------------------------\n"
-                + "Decimal number rounded: " + (int)num);
+                + "Decimal number rounded: " + (int) num);
     }
 }
