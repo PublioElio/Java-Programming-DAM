@@ -6,10 +6,12 @@ import java.util.Scanner;
  * This program calculates the total price of tickets. It asks for the number of
  * adult visitors and children (different prices for each), and applies a 0.5%
  * discount if the total price is 100 or more.
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class TicketPriceCalculator {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         int adult;
         double child, total;
         Scanner sc = new Scanner(System.in);
