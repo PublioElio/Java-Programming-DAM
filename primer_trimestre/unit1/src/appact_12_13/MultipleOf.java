@@ -16,6 +16,7 @@ public class MultipleOf {
         n = sc.nextInt();
         dif = n % 7;
         dif = (dif - 7) < 0 ? (dif - 7) * -1 : dif - 7;
+        dif = dif == n ? 0 : dif;
         System.out.printf("""
                           You must add %d to %d to make it multiple of seven
                           """, dif, n);
@@ -27,6 +28,7 @@ public class MultipleOf {
         m = sc.nextInt();
         dif = n % m;
         dif = (dif - m) < 0 ? (dif - m) * -1 : dif - m;
+        dif = dif == n ? 0 : dif;
         System.out.printf("""
                           You must add %d to %d, and it'll be multiple of %d
                           """, dif, n, m);
