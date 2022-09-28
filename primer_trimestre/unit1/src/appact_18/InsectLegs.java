@@ -5,10 +5,12 @@ import java.util.Scanner;
 /**
  * This program calculates the total number of legs for a quantity of ants,
  * spiders and multipeds entered by the user.
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class InsectLegs {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         int ants, spiders, pillBugs, totalLegs;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter ants: ");
