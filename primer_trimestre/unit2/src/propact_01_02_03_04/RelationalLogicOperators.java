@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * This program asks for two integer numbers and make some comparations to check
  * relational operators and logical operators.
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class RelationalLogicOperators {
@@ -44,7 +45,7 @@ public class RelationalLogicOperators {
                           ----------------------------------------------------
                           """,
                 a, c);
-        c = a !=b || (a == 0 || b == 0);
+        c = a != b || (a == 0 || b == 0);
         System.out.printf("""
                           It's %d equal to %d OR any of them is zero? %b
                           ----------------------------------------------------
@@ -53,5 +54,5 @@ public class RelationalLogicOperators {
         System.out.printf("It's %d multiple of %d? %b\n",
                 a, b, c);
     }
-    
+
 }
