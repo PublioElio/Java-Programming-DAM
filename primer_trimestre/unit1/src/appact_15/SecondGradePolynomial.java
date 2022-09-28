@@ -3,8 +3,8 @@ package appact_15;
 import java.util.Scanner;
 
 /**
- * This program calculates a 2º grade polynomial, first, knowing 'x', later
- * calculating value of 'x'
+ * This program solves a 2º grade polynomial: first, with the value of 'x', 
+ * later calculating value of 'x'
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class SecondGradePolynomial {
