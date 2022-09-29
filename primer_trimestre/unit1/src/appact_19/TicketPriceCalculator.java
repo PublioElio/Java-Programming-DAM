@@ -16,10 +16,10 @@ public class TicketPriceCalculator {
         double child, total;
         Scanner sc = new Scanner(System.in);
         System.out.println("How many adult visitors?");
-        adult = sc.nextInt() * 20;
+        adult = sc.nextInt();
         System.out.println("How many children?");
-        child = sc.nextDouble() * 15.50;
-        total = adult + child;
+        child = sc.nextDouble();
+        total = adult * 20 + child * 15.50;
         total = total >= 100 ? total - (total * 0.05) : total;
         System.out.printf("The total price is %,.2f€\n", total);
     }
