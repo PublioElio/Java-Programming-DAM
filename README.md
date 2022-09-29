@@ -26,4 +26,4 @@ A continuación, se enumeran las unidades del manual y los temas tratados en cad
 Ejercicios básicos para entender la sintaxis de Java, además de otros conceptos comunes para entender cualquier lenguaje de programación. Variables, distintos tipos de operadores, tipos primitivos (tamaños, rangos y conversiones), salida y entrada por consola, la API de java y una breve introducción a los métodos.
 
 ### Unidad 2: condicionales
-En este tema se tratan las estructuras de selección, aplicaciones no lineales, condicionales simples (*if*), dobles (*if-else*) y múltiple (*switch*). Uso extensivo de operadores relacionales y lógicos, además de volver a abordar el operador ternario.
+En este tema se tratan las estructuras de selección, aplicaciones no lineales, condicionales simples (`if`), dobles (`if-else`) y múltiple (`switch`). Uso extensivo de operadores relacionales y lógicos, además de volver a abordar el operador ternario.
