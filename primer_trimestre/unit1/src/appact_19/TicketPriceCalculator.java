@@ -20,7 +20,7 @@ public class TicketPriceCalculator {
         System.out.println("How many children?");
         child = sc.nextDouble();
         total = adult * 20 + child * 15.50;
-        total = total >= 100 ? total - (total * 0.05) : total;
+        total = total >= 100 ? total * 0.95 : total;
         System.out.printf("The total price is %,.2f€\n", total);
     }
 }
