@@ -16,6 +16,8 @@ Los ejercicios están divididos por trimestre. Dentro de cada trimeste, están s
 
 - __addact__ *(additional activity)*: son ejercicios que no entran en ninguna de las categorías anteriores y no provienen del manual, pudiendo ser retos presentados en clase o iniciativas propias del alumno. Su función es reforzar los contenidos trabajados en la unidad.
 
+- __exam__: son exámenes de cada unidad. Normalmente van acompañandos de un `.pdf` que contiene las instrucciones para realizar el examen.
+
 <div id="units" align="center">
   <img src="https://media.giphy.com/media/8NaYbrMzn9a4tu4z6i/giphy.gif" width="150"/>
 </div>
