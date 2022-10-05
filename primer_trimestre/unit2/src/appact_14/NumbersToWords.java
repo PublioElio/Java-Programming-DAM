@@ -97,7 +97,8 @@ public class NumbersToWords {
                             + "is written 'dieciseis'\n");
                 }
                 case 17 -> {
-                    System.out.print("That number in Spanish is written 'diecisiete'\n");
+                    System.out.print("That number in Spanish "
+                            + "is written 'diecisiete'\n");
                 }
                 case 18 -> {
                     System.out.print("That number in Spanish "

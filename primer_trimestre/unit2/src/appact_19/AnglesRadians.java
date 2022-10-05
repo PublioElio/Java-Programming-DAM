@@ -3,7 +3,8 @@ package appact_19;
 import java.util.Scanner;
 
 /**
- *
+ * This program converts the value of the angle in degrees, to its equivalent 
+ * radians
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class AnglesRadians {
