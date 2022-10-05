@@ -12,20 +12,20 @@ public class NumberCounter {
     public static void main(String[] args) {
         int num;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter an integer number between "
+        System.out.print("Enter an integer number between "
                 + "-99.999 and 99.999: ");
         num = sc.nextInt();
         num = num < 0 ? num * -1 : num;
         if (num < 10) {
-            System.out.println("That number has 1 digit");
+            System.out.print("That number has 1 digit");
         } else if (num < 100) {
-            System.out.println("That number has 2 digits");
+            System.out.print("That number has 2 digits");
         } else if (num < 1000) {
-            System.out.println("That number has 3 digits");
-        } else if (num < 10000) {
-            System.out.println("That number has 4 digits");
-        } else if (num < 100000) {
-            System.out.println("That number has 5 digits");
+            System.out.print("That number has 3 digits");
+        } else if (num < 10_000) {
+            System.out.print("That number has 4 digits");
+        } else if (num < 100_000) {
+            System.out.print("That number has 5 digits");
         }
     }
 }
