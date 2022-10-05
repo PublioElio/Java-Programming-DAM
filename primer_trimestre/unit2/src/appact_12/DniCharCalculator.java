@@ -17,105 +17,72 @@ public class DniCharCalculator {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter DNI number: ");
         dni = sc.nextInt();
-        dni %= 23;
-        System.out.printf("The last character in this DNI is: %s\n",
-                charList[dni]);
+        if ((dni > 99_999_999) || (dni < 0)) {
+            System.out.print("Wrong imput\n");
+        } else {
+            dni %= 23;
+            System.out.printf("The last character in this DNI is: %s\n",
+                    charList[dni]);
+        }
         System.out.println("""
                            -----------------------------------------------------
                            Alternative way (with switch): """);
-        switch (dni) {
-            case 0 -> {
-                letter = 'T';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 1 -> {
-                letter = 'R';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 2 -> {
-                letter = 'W';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 3 -> {
-                letter = 'A';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 4 -> {
-                letter = 'G';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 5 -> {
-                letter = 'M';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 6 -> {
-                letter = 'Y';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 7 -> {
-                letter = 'F';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 8 -> {
-                letter = 'P';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 9 -> {
-                letter = 'D';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 10 -> {
-                letter = 'X';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 11 -> {
-                letter = 'B';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 12 -> {
-                letter = 'N';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 13 -> {
-                letter = 'J';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 14 -> {
-                letter = 'Z';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 15 -> {
-                letter = 'S';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 16 -> {
-                letter = 'Q';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 17 -> {
-                letter = 'V';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 18 -> {
-                letter = 'H';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 19 -> {
-                letter = 'L';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 20 -> {
-                letter = 'C';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 21 -> {
-                letter = 'K';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
-            case 22 -> {
-                letter = 'E';
-                System.out.printf("The last character in this DNI is: %c\n", letter);
-            }
+        letter = switch (dni) {
+            case 0 ->
+                'T';
+            case 1 ->
+                'R';
+            case 2 ->
+                'W';
+            case 3 ->
+                'A';
+            case 4 ->
+                'G';
+            case 5 ->
+                'M';
+            case 6 ->
+                'Y';
+            case 7 ->
+                'F';
+            case 8 ->
+                'P';
+            case 9 ->
+                'D';
+            case 10 ->
+                'X';
+            case 11 ->
+                'B';
+            case 12 ->
+                'N';
+            case 13 ->
+                'J';
+            case 14 ->
+                'Z';
+            case 15 ->
+                'S';
+            case 16 ->
+                'Q';
+            case 17 ->
+                'V';
+            case 18 ->
+                'H';
+            case 19 ->
+                'L';
+            case 20 ->
+                'C';
+            case 21 ->
+                'K';
+            case 22 ->
+                'E';
+            default ->
+                '\0';
+        };
+        if (letter != '\0') {
+            System.out.printf("The last character in this "
+                    + "DNI is: %c\n", letter);
+        } else {
+            System.out.print("Wrong imput\n");
         }
+
     }
 }
