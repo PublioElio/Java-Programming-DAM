@@ -27,8 +27,8 @@ public class SecondGradeEcuation {
             if (a == 0) {
                 System.out.println("Error: isn't a second grade ecuation");
             } else {
-                x1 = ((-b + Math.sqrt(d)) / (2 * a));
-                x2 = ((-b - Math.sqrt(d)) / (2 * a));
+                x1 = (-b + (Math.sqrt(d) / (2 * a)));
+                x2 = (-b - (Math.sqrt(d) / (2 * a)));
                 System.out.printf("Solution 1: %,.2f\n", x1);
                 System.out.printf("Solution 2: %,.2f\n", x2);
             }
