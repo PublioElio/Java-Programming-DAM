@@ -38,7 +38,8 @@ public class CheckDate {
 
         }
         if (date) {
-            System.out.printf("%d/%d/%d is a valid date\n", day, month, year);
+            System.out.printf("%d/%d/%d is a valid date\n",
+                    day, month, year);
         } else {
             System.out.println("Invalid date");
         }
