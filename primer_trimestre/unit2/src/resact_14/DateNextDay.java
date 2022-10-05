@@ -13,11 +13,11 @@ public class DateNextDay {
         int day, month, year, monthType;
         String day2, month2, year2;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter day: ");
+        System.out.print("Enter day: ");
         day = sc.nextInt();
-        System.out.println("Enter month: ");
+        System.out.print("Enter month: ");
         month = sc.nextInt();
-        System.out.println("Enter year: ");
+        System.out.print("Enter year: ");
         year = sc.nextInt();
         day++;
         monthType = switch (month) {
