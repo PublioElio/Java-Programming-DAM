@@ -43,18 +43,22 @@ public class GradeResult {
         System.out.print("Enter your score "
                 + "(real number with period, not comma): ");
         realGrade = sc.nextDouble();
-        if (realGrade >= 5){
-            if(realGrade >= 5 && realGrade < 6){
-                System.out.println("Pass");
-            } else if (realGrade >= 6 && realGrade < 7){
-                System.out.println("Good");
-            } else if (realGrade >= 7 && realGrade < 9){
-                System.out.println("Very good");
+        if (realGrade >= 0 && realGrade <= 10) {
+            if (realGrade >= 5) {
+                if (realGrade >= 5 && realGrade < 6) {
+                    System.out.println("Pass");
+                } else if (realGrade >= 6 && realGrade < 7) {
+                    System.out.println("Good");
+                } else if (realGrade >= 7 && realGrade < 9) {
+                    System.out.println("Very good");
+                } else {
+                    System.out.println("Outstanding");
+                }
             } else {
-                System.out.println("Outstanding");
+                System.out.println("Fail");
             }
-        }else{
-            System.out.println("Fail");
+        } else {
+            System.out.println("That's not a valid grade");
         }
     }
 }
