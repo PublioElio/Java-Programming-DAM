@@ -22,7 +22,7 @@ public class AdditionGame {
         randomNum2 *= 100;
         num2 = (int) randomNum2;
         System.out.printf("Enter the result of the next addition: "
-                + "%d + %d:", num1, num2);
+                + "%d + %d: ", num1, num2);
         res = sc.nextInt();
         if (res == (num1 + num2)) {
             System.out.println("That's correct!");

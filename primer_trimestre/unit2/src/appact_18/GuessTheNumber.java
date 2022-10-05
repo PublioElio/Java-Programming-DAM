@@ -4,42 +4,56 @@ import java.util.Scanner;
 import java.util.Random;
 
 /**
- * This program generates two random numbers and asks the user for the addition
- * of both
+ * this program generates two random numbers and a random arithmetic operation
+ * (between subtraction, addition and multiplication), finally the user must
+ * guess the result
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
-public class GuessTheNumber{
+public class GuessTheNumber {
 
     public static void main(String[] args) {
-        double randomNum1, randomNum2;
-        int num1, num2, num3;
-        int res;
-        Random randomNum3 = new Random();
+        int num1, num2, num3, res;
+        char symbol;
+        boolean answer;
+        Random random = new Random();
         Scanner sc = new Scanner(System.in);
-        System.out.println(randomNum3.nextInt(3));
-        randomNum1 = Math.random();
-        randomNum1 *= 100;
-        num1 = (int) randomNum1;
-        randomNum2 = Math.random();
-        randomNum2 *= 100;
-        num2 = (int) randomNum2;
-        System.out.println(randomNum3);
-        
-        /*
-        randomNum3 = Math.random();
-        randomNum3 *= 10;
-        num3 = (int) randomNum3;
-        System.out.println(num3); */
-        
+        num1 = random.nextInt(100 - 1) + 1;
+        num2 = random.nextInt(100 - 1) + 1;
+        num3 = random.nextInt(4 - 1) + 1;
+
+        symbol = switch (num3) { // here we get the symbol
+            case 1 ->
+                '+';
+            case 2 ->
+                '-';
+            case 3 ->
+                'x';
+            default ->
+                '\0';
+        };
+
         System.out.printf("Enter the result of the next operation: "
-                + "%d %c %d:", num1, num2);
+                + "%d %c %d: ", num1, symbol, num2);
         res = sc.nextInt();
-        if (res == (num1 + num2)) {
-            System.out.println("That's correct!");
-        } else {
+
+        answer = switch (symbol) { // check the answer
+            case '+' ->
+                (res == (num1 + num2));
+            case '-' ->
+                (res == (num1 - num2));
+            case 'x' ->
+                (res == (num1 * num2));
+            case '\0' ->
+                false;
+            default ->
+                false;
+        };
+
+        if (!answer) {
             System.out.println("That's incorrect!");
+        } else {
+            System.out.println("That's correct!");
         }
     }
-
 }
