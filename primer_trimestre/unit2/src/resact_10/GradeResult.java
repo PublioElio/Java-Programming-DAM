@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 /**
- * This program asks for a score a grades a student
+ * This program asks for a score and grades a student
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
