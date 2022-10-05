@@ -16,6 +16,7 @@ public class NumberCounter {
                 + "-99.999 and 99.999: ");
         num = sc.nextInt();
         num = num < 0 ? num * -1 : num;
+        if (num <= 99_999){
         if (num < 10) {
             System.out.print("That number has 1 digit");
         } else if (num < 100) {
@@ -26,6 +27,9 @@ public class NumberCounter {
             System.out.print("That number has 4 digits");
         } else if (num < 100_000) {
             System.out.print("That number has 5 digits");
+        }
+        } else {
+            System.out.printf("%d isn't a valid number\n", num);
         }
     }
 }
