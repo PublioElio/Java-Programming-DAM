@@ -11,16 +11,16 @@ public class AnimalFarm {
 
     public static void main(String[] args) {
         int livestockNumber;
-        double dailyRations, kgPerAnimal, rationsForToday;
+        double totalRations, kgPerAnimal, rationsForToday;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the daily rations: ");
-        dailyRations = sc.nextInt();
+        totalRations = sc.nextInt();
         System.out.print("Enter the total number of animals: ");
         livestockNumber = sc.nextInt();
         System.out.print("Enter the quantity of kgs per animal: ");
         kgPerAnimal = sc.nextInt();
         if (livestockNumber != 0) {
-            rationsForToday = dailyRations / (livestockNumber * 1.0);
+            rationsForToday = totalRations / (livestockNumber * 1.0);
             if (rationsForToday >= kgPerAnimal) {
                 System.out.println("There's enought rations for today!");
             } else {
