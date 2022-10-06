@@ -12,8 +12,7 @@ import java.util.Random;
 public class AdditionGame {
 
     public static void main(String[] args) {
-        int num1, num2;
-        int res;
+        int num1, num2, res;
         Scanner sc = new Scanner(System.in);
         Random  random = new Random();
         num1 = random.nextInt(99) + 1;
