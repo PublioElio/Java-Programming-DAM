@@ -29,3 +29,6 @@ Ejercicios básicos para entender la sintaxis de Java, además de otros concepto
 
 ### Unidad 2: condicionales
 En este tema se tratan las estructuras de selección, aplicaciones no lineales, condicionales simples (`if`), dobles (`if-else`) y múltiple (`switch`). Uso extensivo de operadores relacionales y lógicos, además de volver a abordar el operador ternario.
+
+### Unidad 3: bucles
+En esta unidad se tratan las estructuras de repetición (`while`, `do while` y `for`), además de cómo programar aplicaciones que repiten conjuntos de instrucciones mediante el uso de bucles. 
