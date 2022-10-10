@@ -3,8 +3,9 @@ package appact_11;
 import java.util.Scanner;
 
 /**
- * This program checks if a number is a palindrome or not, BUT ONLY USING 
+ * This program checks if a number is a palindrome or not, BUT ONLY USING
  * conditionals (if-else and switch)
+ *
  * @author Adriano Díaz <Adriano.Díaz>
  */
 public class PalindromeNum {
@@ -61,7 +62,18 @@ public class PalindromeNum {
 
         System.out.printf("\nIs '%d' a palindrome number? %b\n",
                 num, palindrome);
-
+        /*
+        System.out.println("""
+                           -----------------------------------------------------
+                           Alternative solution:
+                           """);
+        
+        int pos1, pos2, pos3, pos4;
+        pos1 = num % 10;
+        pos2 = (num / 10) % 10;
+        pos3 = (num / 100) % 10;
+        pos4 = (num / 1000);
+        */
     }
 
 }
