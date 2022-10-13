@@ -14,9 +14,11 @@ public class AnglesRadians {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter angle in degrees: ");
         degrees = sc.nextInt();
-        degrees = degrees < 0 ? -degrees : degrees;
-        degrees = degrees > 360 ? degrees % 360 : degrees; 
-        radians = (degrees * Math.PI) / 180;
+        if ((degrees > 360) || (degrees < -360)){
+            degrees %= 360;
+        }
+        degrees = degrees < 0 ? 360 + degrees : degrees;
+        radians = degrees * (Math.PI / 180);
         System.out.printf("Radians: %,.4f rad\n", radians);
     }
 }
