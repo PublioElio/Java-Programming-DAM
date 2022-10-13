@@ -15,8 +15,8 @@ public class AdditionGame {
         int num1, num2, res;
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        num1 = random.nextInt(1, 99);
-        num2 = random.nextInt(1, 99);
+        num1 = random.nextInt(1, 100);
+        num2 = random.nextInt(1, 100);
         /* we can get random numbers with Math class:
         num1 = Math.random() * 99 + 1;
          */

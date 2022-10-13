@@ -18,8 +18,8 @@ public class GuessTheNumber {
         boolean answer;
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
-        num1 = random.nextInt(1, 99);
-        num2 = random.nextInt(1, 99);
+        num1 = random.nextInt(1, 100);
+        num2 = random.nextInt(1, 100);
         num3 = random.nextInt(1, 4);
         /* 
         We can also get random numbers with Math.random
