@@ -18,9 +18,13 @@ public class GuessTheNumber {
         boolean answer;
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
-        num1 = random.nextInt(99) + 1;
-        num2 = random.nextInt(99) + 1;
-        num3 = random.nextInt(3) + 1;
+        num1 = random.nextInt(1, 99);
+        num2 = random.nextInt(1, 99);
+        num3 = random.nextInt(1, 4);
+        /* 
+        We can also get random numbers with Math.random
+        num1 = Math.random() * 99 +1; 
+         */
 
         symbol = switch (num3) { // here we get the symbol
             case 1 ->
@@ -44,8 +48,6 @@ public class GuessTheNumber {
                 (res == (num1 - num2));
             case 'x' ->
                 (res == (num1 * num2));
-            case '\0' ->
-                false;
             default ->
                 false;
         };

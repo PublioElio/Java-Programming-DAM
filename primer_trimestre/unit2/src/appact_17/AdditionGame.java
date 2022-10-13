@@ -14,10 +14,13 @@ public class AdditionGame {
     public static void main(String[] args) {
         int num1, num2, res;
         Scanner sc = new Scanner(System.in);
-        Random  random = new Random();
-        num1 = random.nextInt(99) + 1;
-        num2 = random.nextInt(99) + 1;
-        
+        Random random = new Random();
+        num1 = random.nextInt(1, 99);
+        num2 = random.nextInt(1, 99);
+        /* we can get random numbers with Math class:
+        num1 = Math.random() * 99 + 1;
+         */
+
         System.out.printf("Enter the result of the next addition: "
                 + "%d + %d: ", num1, num2);
         res = sc.nextInt();
