@@ -21,7 +21,7 @@ public class MinMaxAge {
         max = num;
         validNum = num != -1;
         while (validNum) {
-            if (num < 1) {
+            if ((num < 1) || (num > 100)) {
                 System.out.print("That's not a valid imput\n");
             } else {
                 max = max < num ? num : max;
@@ -32,7 +32,7 @@ public class MinMaxAge {
             num = sc.nextInt();
             validNum = num != -1;
         }
-
+        min = min < 0 ? 1 : min;
         System.out.printf("The maximum is %d, and the minimum is %d\n",
                     max, min);
 
