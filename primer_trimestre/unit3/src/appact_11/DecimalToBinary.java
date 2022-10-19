@@ -12,11 +12,11 @@ public class DecimalToBinary {
 
     public static void main(String[] args) {
         int decimalNum, binaryNum;
+        // int rev = 0, digit, i = 0;
         String binary = "", binaryRev = "";
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a positive integer decimal number: ");
-        decimalNum = sc.nextInt();
-        decimalNum = Math.abs(decimalNum);
+        decimalNum = Math.abs(sc.nextInt());
         /* calculate the value in binary */
         while (decimalNum > 0) {
             binaryNum = decimalNum % 2;
@@ -27,7 +27,17 @@ public class DecimalToBinary {
         for (int x = binary.length() - 1; x >= 0; x--) {
             binaryRev += binary.charAt(x);
         }
-        System.out.printf("This number in binary is: %s\n", 
+        /*
+        alternative way:
+        while(decimalNum > 0){
+        digit = decimalNum % 2;
+        rev = (digit * (int)Math.pow(10, i)) + rev;
+        decimalNum = decimalNum / 2;
+        i++;
+        } 
+        */
+
+        System.out.printf("This number in binary is: %s\n",
                 binaryRev);
     }
 
