@@ -19,7 +19,7 @@ public class TallerTree {
                 + "(imput '-1' to finish program): ", treeID);
         height = sc.nextInt();
         tallestTree = height;
-        while (height != -1) {
+        while (height > -1) {
             tallestTree = tallestTree <= height ? height : tallestTree;
             tallestTreeID = tallestTree == height ? treeID : tallestTreeID;
             treeID++;
@@ -27,7 +27,7 @@ public class TallerTree {
                     + "number %d (imput '-1' to finish program): ", treeID);
             height = sc.nextInt();
         }
-        if (tallestTree != -1) {
+        if (tallestTree > -1) {
             System.out.printf("""
                           The tallest tree height is %dcm, and the ID is %d
                           """, tallestTree, tallestTreeID);
