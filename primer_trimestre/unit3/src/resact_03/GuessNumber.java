@@ -20,17 +20,17 @@ public class GuessNumber {
                 + "(enter a negative number to give up): ");
         userNum = sc.nextInt();
         tries++;
-        while ((userNum > 0) && (userNum != secretNum)) {
+        while ((userNum > 0) && (userNum != secretNum) && (tries != 5)) {
 
             if (userNum > secretNum) {
                 System.out.println("The secret number is lesser");
             } else {
                 System.out.println("The secret number is higher");
             }
-            tries++;
             System.out.print("Guess the secret number between '1' and '100'!! "
                     + "(enter a negative number to give up): ");
             userNum = sc.nextInt();
+            tries++;
         }
         if (userNum == secretNum) {
             System.out.println("You win!!");
