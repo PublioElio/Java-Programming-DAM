@@ -3,6 +3,8 @@ package resact_01;
 import java.util.Scanner;
 
 /**
+ * This program asks for a number and shows if is even, positive, and the result
+ * of the power of two
  *
  * @author Adriano Díaz <Adriano.Díaz>
  */
