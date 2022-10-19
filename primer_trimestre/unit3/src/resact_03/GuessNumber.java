@@ -17,7 +17,7 @@ public class GuessNumber {
         Scanner sc = new Scanner(System.in);
         secretNum = (int) (Math.random() * 100) + 1;
         System.out.print("Guess the secret number between '1' and '100'!! "
-                + "(enter a negative number to give up): ");
+                + "(enter a negative number or zero to give up): ");
         userNum = sc.nextInt();
         tries++;
         while ((userNum > 0) && (userNum != secretNum) && (tries != 5)) {
