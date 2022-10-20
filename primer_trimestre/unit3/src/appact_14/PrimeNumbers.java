@@ -3,6 +3,8 @@ package appact_14;
 import java.util.Scanner;
 
 /**
+ * This program ask for an integer positive numbes (n) and shows all the prime
+ * numbers from 1 to 'n'
  *
  * @author Adriano Díaz <Adriano.Díaz>
  */
@@ -14,7 +16,7 @@ public class PrimeNumbers {
         do {
             System.out.print("Enter a positive integer number: ");
             n = sc.nextInt();
-        } while (n < 1);
+        } while (n < 1); // this do while checks that the imput is valid
         System.out.print("List of prime numbers: 1");
         for (int i = 2; i <= n; i++) {
             boolean isPrime = true;
