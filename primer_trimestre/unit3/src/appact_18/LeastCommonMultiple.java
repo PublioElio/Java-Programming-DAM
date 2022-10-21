@@ -46,12 +46,12 @@ public class LeastCommonMultiple {
      * @return the GCD
      */
     public static int get_GCD(int lower, int greater) {
-        int i = lower;
-        for (; i > 0; i--) {
-            if (((lower % i) == 0) && ((greater % i) == 0)) {
-                return (i);
+        int gcd = lower;
+        for (; gcd > 0; gcd--) {
+            if (((lower % gcd) == 0) && ((greater % gcd) == 0)) {
+                return (gcd);
             }
         }
-        return (i);
+        return (gcd);
     }
 }

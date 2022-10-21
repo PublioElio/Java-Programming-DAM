@@ -3,7 +3,7 @@ package resact_08;
 import java.util.Scanner;
 
 /**
- * this program asks for 10 numbers and does the arithmetic mean
+ * This program asks for 10 numbers and does the arithmetic mean
  *
  * @author Adriano Díaz <Adriano.Díaz>
  */
