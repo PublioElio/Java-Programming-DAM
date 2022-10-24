@@ -9,14 +9,10 @@ import java.util.Scanner;
 public class SquareRoot {
 
     public static void main(String[] args) {
-        int a;
-        double sqrt, i = 1;
-        a = get_num();
-        sqrt = Math.sqrt(a);
-        for(; Math.pow(i, 2) <= sqrt; i++){
-        }
-        
-        i = sqrt > i ? sqrt - i : i;
+        int num, sqrt, pow, remainder;
+        num = get_num();
+        test_sqrt(num);
+        get_sqrt(num);
     }
 
     /**
@@ -30,8 +26,39 @@ public class SquareRoot {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter a positive integer number: ");
             num = sc.nextInt();
-        } while (num > 0);
+        } while (num < 0);
         return (num);
+    }
+
+    public static void test_sqrt(int num) {
+        int sqrt, pow, remainder;
+        sqrt = (int) Math.sqrt(num);
+        pow = (int) Math.pow(sqrt, 2);
+        remainder = num - pow;
+        if (remainder > 0) {
+            System.out.printf("The square root of %d is %d, with a remainder"
+                    + " of %d\n", num, sqrt, remainder);
+        } else {
+            System.out.printf("The square root of %d is %d\n",
+                    num, sqrt);
+        }
+
+    }
+
+    public static void get_sqrt(int num) {
+        int sqrt, pow, remainder;
+        for (sqrt = 1; (sqrt * sqrt) <= num; sqrt++) {
+        }
+        sqrt--;
+        pow = sqrt * sqrt;
+        remainder = num - pow;
+        if (remainder > 0) {
+            System.out.printf("The square root of %d is %d, with a remainder"
+                    + " of %d\n", num, sqrt, remainder);
+        } else {
+            System.out.printf("The square root of %d is %d\n",
+                    num, sqrt);
+        }
     }
 
 }
