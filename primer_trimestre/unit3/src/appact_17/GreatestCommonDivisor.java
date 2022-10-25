@@ -26,7 +26,7 @@ public class GreatestCommonDivisor {
      *
      * @return the entered int
      */
-    public static int get_number() {
+    static int get_number() {
         int num;
         Scanner sc = new Scanner(System.in);
         do {
@@ -43,7 +43,7 @@ public class GreatestCommonDivisor {
      * @param greater the greater int enterded by the user
      * @return the GCD
      */
-    public static int get_GCD(int lower, int greater) {
+    static int get_GCD(int lower, int greater) {
         int gcd = lower;
         for (; gcd > 0; gcd--) {
             if (((lower % gcd) == 0) && ((greater % gcd) == 0)) {

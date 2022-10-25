@@ -22,7 +22,7 @@ public class SquareRoot {
      *
      * @return an integer positive number
      */
-    public static int get_num() {
+    static int get_num() {
         int num;
         do {
             Scanner sc = new Scanner(System.in);
@@ -41,7 +41,7 @@ public class SquareRoot {
      *
      * @param num the number to calculate the sqrt
      */
-    public static void test_sqrt(int num) {
+    static void test_sqrt(int num) {
         int sqrt, pow, remainder;
         sqrt = (int) Math.sqrt(num);
         pow = (int) Math.pow(sqrt, 2);
@@ -61,7 +61,7 @@ public class SquareRoot {
      *
      * @param num the calculation of the sqrt
      */
-    public static void get_sqrt(int num) {
+    static void get_sqrt(int num) {
         int sqrt, pow, remainder;
         for (sqrt = 1; (sqrt * sqrt) <= num; sqrt++) {
         }
