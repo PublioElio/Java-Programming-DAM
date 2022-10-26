@@ -10,18 +10,16 @@ import java.util.Scanner;
 public class PrintTriangle {
 
     public static void main(String[] args) {
-        int num, sides;
+        int num;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a positive integer number: ");
         num = sc.nextInt();
         num = Math.abs(num);
-        sides = num;
-        for (int i = 0; i < num; i++) {
-            for (int j = sides; j > 0; j--) {
+        for (int row = 0; row < num; row++) {
+            for (int j = num; j > row; j--) {
                 System.out.print("*");
             }
-            sides--;
-            System.out.println("");
+            System.out.println();
         }
     }
 
