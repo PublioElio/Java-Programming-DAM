@@ -20,10 +20,10 @@ public class PrintTriangle {
         for (int i = 0; i < n; i++) {
 
             for (int j = n - i; j > 1; j--) {
-                System.out.print(" "); // print space between stars
+                System.out.print(" "); // print spaces before '*'
             }
             for (int k = 0; k <= i; k++) {
-                System.out.print("* "); // prints *
+                System.out.print("* "); // prints '*'
             }
             System.out.println();
         }
