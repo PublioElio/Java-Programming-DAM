@@ -16,7 +16,7 @@ public class CalculateAverage {
         Scanner sc = new Scanner(System.in);
         do {
             System.out.print("Enter a positive integer number.\nEnter a "
-                    + "negative number to calculate average: ");
+                    + "negative number when finish to calculate average: ");
             num = sc.nextInt();
             if (num >= 0) {
                 total += num;
