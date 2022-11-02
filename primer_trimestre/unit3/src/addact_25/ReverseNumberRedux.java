@@ -49,7 +49,6 @@ public class ReverseNumberRedux {
             num /= 10;
         }
         return (reversed);
-
     }
 
 }
