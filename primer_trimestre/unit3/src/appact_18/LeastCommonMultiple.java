@@ -18,8 +18,9 @@ public class LeastCommonMultiple {
         greater = a > b ? a : b;
         divisor = get_GCD(lower, greater);
         multiple = (a * b) / divisor;
-        System.out.printf("The least common multiple (LCM) of the entered"
-                + " numbers is: %d\n", multiple);
+        System.out.printf("""
+                          The least common multiple (LCM) of the entered numbers is: %d
+                          """, multiple);
 
     }
 
