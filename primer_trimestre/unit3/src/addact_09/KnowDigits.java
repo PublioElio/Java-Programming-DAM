@@ -12,10 +12,10 @@ public class KnowDigits {
     public static void main(String[] args) {
         int num, digits = 0;
         num = get_num();
-        while (num != 0) {
+        do {
             num /= 10;
             digits++;
-        }
+        } while (num != 0);
         System.out.printf("That number has %d digits\n", digits);
     }
 
