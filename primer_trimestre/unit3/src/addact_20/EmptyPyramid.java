@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class EmptyPyramid {
 
     public static void main(String[] args) {
-        int h, test;
+        int h;
         char c;
         h = get_height();
         c = get_char();
@@ -19,7 +19,8 @@ public class EmptyPyramid {
             for (int j = i; j < h; j++) { // print blank spaces before character
                 System.out.print(" ");
             }
-            /* the next loop prints character and empty spaces inside the pyramid */
+            /* the next loop prints character and empty spaces inside the 
+            pyramid */
             for (int k = 0; k <= i; k++) {
                 if ((k == 0) || (k == i) || (i == (h - 1))) {
                     System.out.printf("%c ", c);
