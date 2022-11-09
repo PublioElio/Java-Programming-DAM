@@ -41,7 +41,7 @@ public class ChangeDigit {
     }
 
     /**
-     * Whit this function we get the lenght of the number (in digits)
+     * With this function we get the lenght of the number (in digits)
      *
      * @param num the number whose size we whant to know
      * @return the lenght of the number
