@@ -29,6 +29,11 @@ public class SumEvenDigits {
                 total);
     }
 
+    /**
+     * This function gets a positive integer number
+     *
+     * @return
+     */
     static long get_num() {
         long num;
         Scanner sc = new Scanner(System.in);
