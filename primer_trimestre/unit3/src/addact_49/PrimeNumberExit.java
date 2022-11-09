@@ -3,11 +3,11 @@ package addact_49;
 import java.util.Scanner;
 
 /**
- * This program calculates the maximum, the minimum and the mean of a series. of
+ * This program calculates the maximum, the minimum and the mean of a series of
  * positive integers entered by keyboard. The program will end when the user
  * enters a prime number. This last number will not be taken into account in the
  * calculations. The program must also indicate how many numbers has entered the
- * user (not counting the last prime number used to exit).
+ * user (not counting the last prime number).
  *
  * @author Adriano Díaz <Adriano.Díaz>
  */
