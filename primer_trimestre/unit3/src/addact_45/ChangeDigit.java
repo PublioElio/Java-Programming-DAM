@@ -12,33 +12,23 @@ import java.util.Scanner;
 public class ChangeDigit {
 
     public static void main(String[] args) {
-        long num, pos = 0;
-        int newDigit = 0, lenght = 0;
-        boolean validPos;
-        String newNumber = "";
-        num = get_num();
+        long num, pos;
+        int newDigit, lenght;
+
+        num = get_num(); // first, we get a valid number
+
         /* if the number has only one position, we just change the number */
         if (num < 10) {
             num = get_digit();
         } else {
-            lenght = num_lenght(num);
-            do {
-                System.out.printf("Choose the position to change "
-                        + "(between 1 and %d). ", lenght);
-                pos = get_num();
-                validPos = (pos <= lenght) && (pos > 0);
-                if (!validPos) {
-                    System.out.println("That's not a valid position. ");
-                }
-            } while (!validPos);
-            newDigit = get_digit();
-
-            num = change_num(num, pos, newDigit, lenght);
-
+            lenght = num_lenght(num); // we get the lenght of the number
+            pos = get_position(lenght); // here, we get a valid position
+            newDigit = get_digit(); // we get the new digit
+            num = change_num(num, pos, newDigit, lenght); // we put the new digit in the number
         }
 
         System.out.printf("The new number, with the changed digit is: %s\n",
-                newNumber);
+                num);
     }
 
     /**
@@ -95,17 +85,48 @@ public class ChangeDigit {
         return (num);
     }
 
+    /**
+     * This function changes a digit of a number in a given position
+     *
+     * @param num the number to change digit
+     * @param pos the position in the number
+     * @param newDigit the new digit
+     * @param lenght the lenght of the number
+     * @return the number with the new digit in the given position
+     */
     static long change_num(long num, long pos, int newDigit, int lenght) {
-        long newNum, tempDigit;
+        long newNum = 0, tempDigit, exp = 0;
         for (int i = lenght; i > 0; i--) {
             tempDigit = num % 10;
             if (i == pos) {
-                newNum = newDigit + newNum;
+                newNum = newNum + newDigit * (int) Math.pow(10, exp);
             } else {
-                newNum = tempDigit + newNum;
+                newNum = newNum + tempDigit * (int) Math.pow(10, exp);
             }
+            exp++;
             num /= 10;
         }
         return (newNum);
+    }
+
+    /**
+     * This function gets a valid position for a number of a given lenght
+     *
+     * @param lenght the size of the number in digits
+     * @return the position that we want to change in the number
+     */
+    private static long get_position(int lenght) {
+        long pos;
+        boolean validPos;
+        do {
+            System.out.printf("Choose the position to change "
+                    + "(between 1 and %d). ", lenght);
+            pos = get_num();
+            validPos = (pos <= lenght) && (pos > 0);
+            if (!validPos) {
+                System.out.println("That's not a valid position. ");
+            }
+        } while (!validPos);
+        return (pos);
     }
 }
