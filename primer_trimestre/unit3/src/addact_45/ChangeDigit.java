@@ -12,9 +12,10 @@ import java.util.Scanner;
 public class ChangeDigit {
 
     public static void main(String[] args) {
-        long num, pos;
-        int newDigit, lenght;
-        boolean changeDigit = false, validPos;
+        long num, pos = 0;
+        int newDigit = 0, lenght = 0;
+        boolean validPos;
+        String newNumber = "";
         num = get_num();
         /* if the number has only one position, we just change the number */
         if (num < 10) {
@@ -31,13 +32,13 @@ public class ChangeDigit {
                 }
             } while (!validPos);
             newDigit = get_digit();
-            num = reverse_num(num, pos, newDigit, changeDigit);
-            changeDigit = true;
-            num = reverse_num(num, pos, newDigit, changeDigit);
+
+            num = change_num(num, pos, newDigit, lenght);
+
         }
 
-        System.out.printf("The new number, with the changed digit is: %d\n",
-                num);
+        System.out.printf("The new number, with the changed digit is: %s\n",
+                newNumber);
     }
 
     /**
@@ -53,34 +54,6 @@ public class ChangeDigit {
             num /= 10;
         } while (num != 0);
         return (count);
-    }
-
-    /**
-     *
-     * This function flips a number and changes a digit in a given position
-     *
-     * @param num the number to flip
-     * @param pos the position of the number to flip
-     * @param newDigit the digit to change in the given position
-     * @param changeDigit if its true, the function has to change the digit in
-     * the given position
-     * @return the reversed number
-     */
-    static long reverse_num(long num, long pos, int newDigit, boolean changeDigit) {
-        long rev = 0, digit;
-        int counter = 0;
-        while (num != 0) {
-            if (changeDigit) {
-                counter++;
-                digit = (counter == pos) ? newDigit : (num % 10);
-            } else {
-                digit = num % 10;
-            }
-
-            rev = (rev * 10) + digit;
-            num /= 10;
-        }
-        return (rev);
     }
 
     /**
@@ -120,5 +93,19 @@ public class ChangeDigit {
             }
         } while (num < 0);
         return (num);
+    }
+
+    static long change_num(long num, long pos, int newDigit, int lenght) {
+        long newNum, tempDigit;
+        for (int i = lenght; i > 0; i--) {
+            tempDigit = num % 10;
+            if (i == pos) {
+                newNum = newDigit + newNum;
+            } else {
+                newNum = tempDigit + newNum;
+            }
+            num /= 10;
+        }
+        return (newNum);
     }
 }
