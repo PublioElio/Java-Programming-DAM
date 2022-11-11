@@ -2,8 +2,8 @@
   <img src="https://media.giphy.com/media/YpZbh3wXqG11aK2zRd/giphy.gif" width="250"/>
 </div>
 
-# Java Programación 1º DAM
-Ejercicios de programación en Java realizados en la asignatura de Programación en 1º de DAM en el I.E.S. Belén. La mayoría de los ejercicios de este repositorio están extraídos del manual de [Programación de Alfonso Jiménez Martín y Francisco Manuel Pérez Montes (ed. Paraninfo)](https://www.paraninfo.es/catalogo/9788428342865/programacion--edicion-2021-).
+# Java Programming (1º DAM)
+Java exercises for the Programming subject in 1st year of DAM at the I.E.S. Belen. Most of the exercises in this repository are taken from the Programming manual by [Alfonso Jiménez Martín and Francisco Manuel Pérez Montes (ed. Paraninfo)](https://www.paraninfo.es/catalogo/9788428342865/programacion--edicion-2021-).
 
 ## Estructura de archivos :file_folder:
 Los ejercicios están divididos por trimestre. Dentro de cada trimeste, están separados por las unidades del manual (listadas más adelante). Dentro de cada carpeta de unidad hay un proyecto Java con varios *packages*, numerados y llamados de la siguiente manera:
