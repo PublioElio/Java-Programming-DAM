@@ -32,7 +32,7 @@ public class DecimalToBinary {
         while(decimalNum > 0){
         digit = decimalNum % 2;
         rev = (digit * (int)Math.pow(10, i)) + rev;
-        decimalNum = decimalNum / 2;
+        decimalNum /= 2;
         i++;
         } 
         */

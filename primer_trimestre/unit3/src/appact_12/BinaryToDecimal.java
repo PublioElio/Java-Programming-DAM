@@ -18,19 +18,17 @@ public class BinaryToDecimal {
             System.out.print("Enter a valid binary integer number: ");
             binaryNum = sc.nextInt();
             testBinary = binaryNum;
-            while (testBinary > 0) {
+            while ((testBinary != 0) && isBinary) {
                 int temp = testBinary % 10;
-                if (temp > 1) {
-                    isBinary = false;
-                }
-                testBinary = testBinary / 10;
+                isBinary = temp <= 1;
+                testBinary /=  10;
             }
         } while (!isBinary); // this while checks that the number is valid
 
-        while (binaryNum > 0) {
+        while (binaryNum != 0) {
             int i = 0, temp = binaryNum % 10;
             decimalNum += temp * Math.pow(2, i);
-            binaryNum = binaryNum / 10;
+            binaryNum /= 10;
             i++;
         }
         System.out.printf("That number in decimal base is: %d\n",
