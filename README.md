@@ -32,3 +32,5 @@ En este tema se tratan las estructuras de selección, aplicaciones no lineales, 
 
 ### Unidad 3: bucles
 En esta unidad se tratan las estructuras de repetición (`while`, `do while` y `for`), además de cómo programar aplicaciones que repiten conjuntos de instrucciones mediante el uso de bucles. 
+
+### Unidad 4: funciones
