@@ -9,24 +9,12 @@ import java.util.Scanner;
  */
 public class isPrime {
 
-    public static void main(String[] args) {
-        int n;
-        boolean isPrime;
-        n = get_num();
-        isPrime = check_prime_num(n);
-        if (isPrime) {
-            System.out.printf("'%d' is a prime number.\n", n);
-        } else {
-            System.out.printf("'%d' isn't a prime number.\n", n);
-        }
-    }
-
     /**
      * This function gets a positive integer number
      *
      * @return a positive integer number
      */
-    static int get_num() {
+    static int getNum() {
         int n;
         Scanner sc = new Scanner(System.in);
         do {
@@ -45,7 +33,7 @@ public class isPrime {
      * @param n the number to check
      * @return true if the number is prime
      */
-    static boolean check_prime_num(int n) {
+    static boolean checkPrimeNum(int n) {
         boolean isPrime = true;
         if (n < 2) {
             isPrime = false;
@@ -58,4 +46,17 @@ public class isPrime {
         }
         return (isPrime);
     }
+
+    public static void main(String[] args) {
+        int n;
+        boolean isPrime;
+        n = getNum();
+        isPrime = checkPrimeNum(n);
+        if (isPrime) {
+            System.out.printf("'%d' is a prime number.\n", n);
+        } else {
+            System.out.printf("'%d' isn't a prime number.\n", n);
+        }
+    }
+
 }
