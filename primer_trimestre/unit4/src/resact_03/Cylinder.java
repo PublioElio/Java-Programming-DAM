@@ -10,10 +10,6 @@ import java.util.Scanner;
  */
 public class Cylinder {
 
-    public static void main(String[] args) {
-        menu();
-    }
-
     /**
      * This function asks for an option: '1' is for calculate area, '2' is for
      * calculate volume
@@ -27,9 +23,9 @@ public class Cylinder {
             option = sc.nextInt();
             switch (option) {
                 case 1 ->
-                    cylinder_area();
+                    cylinderArea();
                 case 2 ->
-                    cylinder_volume();
+                    cylinderVolume();
                 default ->
                     System.out.print("Invalid option. ");
             }
@@ -40,10 +36,10 @@ public class Cylinder {
      * This function calculates the area of a cylinder, asking for radius and
      * height
      */
-    static void cylinder_area() {
+    static void cylinderArea() {
         double a, h, r;
-        r = get_value("radius");
-        h = get_value("height");
+        r = getValue("radius");
+        h = getValue("height");
         a = 2 * Math.PI * r * (h + r);
         System.out.printf("The area of a cylinder with radius %,.2f "
                 + "and height %,.2f is: %,.2f\n", r, h, a);
@@ -53,10 +49,10 @@ public class Cylinder {
      * This function calculates the volume of a cylinder, asking for radius and
      * height
      */
-    static void cylinder_volume() {
+    static void cylinderVolume() {
         double v, h, r;
-        r = get_value("radius");
-        h = get_value("height");
+        r = getValue("radius");
+        h = getValue("height");
         v = Math.PI * Math.pow(r, 2) * h;
         System.out.printf("The volume of a cylinder with radius %,.2f "
                 + "and height %,.2f is: %,.2f\n", r, h, v);
@@ -69,7 +65,7 @@ public class Cylinder {
      * @param value the value that will be asked to the user
      * @return the user entered value
      */
-    static double get_value(String value) {
+    static double getValue(String value) {
         double n;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
@@ -82,4 +78,9 @@ public class Cylinder {
         } while (n < 0);
         return (n);
     }
+
+    public static void main(String[] args) {
+        menu();
+    }
+
 }
