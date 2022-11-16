@@ -9,12 +9,6 @@ import java.util.Scanner;
  */
 public class Echo {
 
-    public static void main(String[] args) {
-        int n;
-        n = get_num();
-        echo(n);
-    }
-
     /**
      * This function prints "Echo..." on console 'n' times
      *
@@ -31,7 +25,7 @@ public class Echo {
      *
      * @return a positive integer number
      */
-    static int get_num() {
+    static int getNum() {
         int n;
         Scanner sc = new Scanner(System.in);
         do {
@@ -42,5 +36,11 @@ public class Echo {
             }
         } while (n < 0);
         return (n);
+    }
+
+    public static void main(String[] args) {
+        int n;
+        n = getNum();
+        echo(n);
     }
 }
