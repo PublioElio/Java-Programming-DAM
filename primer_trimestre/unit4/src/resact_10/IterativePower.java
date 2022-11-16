@@ -10,18 +10,6 @@ import java.util.Locale;
  */
 public class IterativePower {
 
-    public static void main(String[] args) {
-        double a, pow;
-        int n;
-
-        a = get_double();
-        n = get_int();
-        pow = iterative_pow(a, n);
-
-        System.out.printf("%,.2f to the power of %d is %,.2f\n",
-                a, n, pow);
-    }
-
     /**
      * This program calculates 'a' to the power of 'n'
      *
@@ -29,7 +17,7 @@ public class IterativePower {
      * @param n integer positive number
      * @return the result, a double
      */
-    static double iterative_pow(double a, int n) {
+    static double iterativePow(double a, int n) {
         double pow = a;
         if (n == 0) {
             pow = 1;
@@ -46,7 +34,7 @@ public class IterativePower {
      *
      * @return a positive integer number
      */
-    static int get_int() {
+    static int getInt() {
         int num;
         Scanner sc = new Scanner(System.in);
         do {
@@ -64,7 +52,7 @@ public class IterativePower {
      *
      * @return a real number, higher than '0'
      */
-    static double get_double() {
+    static double getDouble() {
         double num;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
@@ -76,6 +64,18 @@ public class IterativePower {
             }
         } while (num <= 0);
         return (num);
+    }
+
+    public static void main(String[] args) {
+        double a, pow;
+        int n;
+
+        a = getDouble();
+        n = getInt();
+        pow = iterativePow(a, n);
+
+        System.out.printf("%,.2f to the power of %d is %,.2f\n",
+                a, n, pow);
     }
 
 }

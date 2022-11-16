@@ -14,9 +14,9 @@ public class RecursivePower {
         double a, pow;
         int n;
 
-        a = get_double();
-        n = get_int();
-        pow = recursive_pow(a, n);
+        a = getDouble();
+        n = getInt();
+        pow = recursivePow(a, n);
 
         System.out.printf("%,.2f to the power of %d is %,.2f\n",
                 a, n, pow);
@@ -29,12 +29,12 @@ public class RecursivePower {
      * @param n the integer number
      * @return the result of the operation
      */
-    static double recursive_pow(double a, int n) {
+    static double recursivePow(double a, int n) {
         double pow;
         if (n == 0) {
             pow = 1;
         } else {
-            pow = a * recursive_pow(a, (n - 1));
+            pow = a * recursivePow(a, (n - 1));
         }
         return (pow);
     }
@@ -44,7 +44,7 @@ public class RecursivePower {
      *
      * @return a positive integer number
      */
-    static int get_int() {
+    static int getInt() {
         int num;
         Scanner sc = new Scanner(System.in);
         do {
@@ -62,7 +62,7 @@ public class RecursivePower {
      *
      * @return a real number, higher than '0'
      */
-    static double get_double() {
+    static double getDouble() {
         double num;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
