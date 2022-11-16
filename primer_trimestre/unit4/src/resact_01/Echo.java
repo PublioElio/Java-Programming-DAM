@@ -39,8 +39,6 @@ public class Echo {
     }
 
     public static void main(String[] args) {
-        int n;
-        n = getNum();
-        echo(n);
+        echo(getNum());
     }
 }
