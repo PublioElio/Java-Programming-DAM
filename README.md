@@ -33,5 +33,5 @@ This topic covers selection structures, nonlinear applications, single (`if`), d
 ### Unit 3: loops
 This unit covers repetition structures (`while`, `do while`, and `for`), as well as how to program applications that repeat sets of statements using loops. Has been made an extensive use of functions for the resolution of the exercises in order to not repeat code, although the functions will be explained in the next unit.
 
-### Unidad 4: functions
+### Unit 4: functions
 This unit introduces the concept of __functions__, the advantages of its use and implementation in the code. The exercises deal with imput parameters, automating functions, __overloading__ and writing programs that make use of __recursion__.
