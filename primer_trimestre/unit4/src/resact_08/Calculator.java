@@ -11,15 +11,6 @@ import java.util.Scanner;
  */
 public class Calculator {
 
-    public static void main(String[] args) {
-        double result, num1, num2;
-        num1 = get_num("first");
-        num2 = get_num("second");
-        result = calculator(num1, num2);
-        System.out.printf("The result of the operation is: %,.2f\n",
-                result);
-    }
-
     /**
      * This is a calculator that makes additions, subtractions, multiplications
      * and divisions between two numbers
@@ -38,7 +29,7 @@ public class Calculator {
                                2. Subtraction 
                                3. Multiplication 
                                4. Division""");
-            choice = (int) get_num("");
+            choice = (int) getNum("");
             switch (choice) {
                 case 1 ->
                     result = num1 + num2;
@@ -69,13 +60,22 @@ public class Calculator {
      * @param ordinal this string is shown in the message asking for the number
      * @return the number
      */
-    static double get_num(String ordinal) {
+    static double getNum(String ordinal) {
         double num;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
         System.out.printf("Enter %s number: ", ordinal);
         num = sc.nextDouble();
         return (num);
+    }
+
+    public static void main(String[] args) {
+        double result, num1, num2;
+        num1 = getNum("first");
+        num2 = getNum("second");
+        result = calculator(num1, num2);
+        System.out.printf("The result of the operation is: %,.2f\n",
+                result);
     }
 
 }
