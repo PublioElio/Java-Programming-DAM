@@ -39,11 +39,9 @@ public class BetweenTwoNumbers {
      * @return the entered number
      */
     static int getNum(String order) {
-        int n;
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter %s number: ", order);
-        n = sc.nextInt();
-        return (n);
+        return (sc.nextInt());
     }
 
     public static void main(String[] args) {

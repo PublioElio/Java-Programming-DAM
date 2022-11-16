@@ -31,9 +31,7 @@ public class GetMaximunRedux {
      * @return the maximum value
      */
     static int getMax(int num1, int num2, int num3) {
-        int max;
-        max = getMax(getMax(num1, num2), num3);
-        return (max);
+        return (getMax(getMax(num1, num2), num3));
     }
 
     /**
@@ -43,11 +41,9 @@ public class GetMaximunRedux {
      * @return a integer
      */
     static int getNum(String ordinal) {
-        int num;
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter %s number: ", ordinal);
-        num = sc.nextInt();
-        return (num);
+        return (sc.nextInt());
     }
 
     public static void main(String[] args) {

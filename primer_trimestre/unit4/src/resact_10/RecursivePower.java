@@ -10,18 +10,6 @@ import java.util.Locale;
  */
 public class RecursivePower {
 
-    public static void main(String[] args) {
-        double a, pow;
-        int n;
-
-        a = getDouble();
-        n = getInt();
-        pow = recursivePow(a, n);
-
-        System.out.printf("%,.2f to the power of %d is %,.2f\n",
-                a, n, pow);
-    }
-
     /**
      * This function is a recursive way to calculate 'a' to the power of 'n'
      *
@@ -74,6 +62,17 @@ public class RecursivePower {
             }
         } while (num <= 0);
         return (num);
+    }
+
+    public static void main(String[] args) {
+        double a;
+        int n;
+
+        a = getDouble();
+        n = getInt();
+
+        System.out.printf("%,.2f to the power of %d is %,.2f\n",
+                a, n, recursivePow(a, n));
     }
 
 }

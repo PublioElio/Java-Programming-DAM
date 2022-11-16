@@ -17,11 +17,9 @@ public class GetMaximun {
      * @return an integer number
      */
     static int getNum(String ordinal) {
-        int n;
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter %s integer number: ", ordinal);
-        n = sc.nextInt();
-        return (n);
+        return (sc.nextInt());
     }
 
     /**

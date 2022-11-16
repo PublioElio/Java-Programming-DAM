@@ -61,21 +61,18 @@ public class Calculator {
      * @return the number
      */
     static double getNum(String ordinal) {
-        double num;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
         System.out.printf("Enter %s number: ", ordinal);
-        num = sc.nextDouble();
-        return (num);
+        return (sc.nextDouble());
     }
 
     public static void main(String[] args) {
-        double result, num1, num2;
+        double num1, num2;
         num1 = getNum("first");
         num2 = getNum("second");
-        result = calculator(num1, num2);
         System.out.printf("The result of the operation is: %,.2f\n",
-                result);
+                calculator(num1, num2));
     }
 
 }

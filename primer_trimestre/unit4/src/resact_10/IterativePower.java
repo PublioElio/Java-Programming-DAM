@@ -67,15 +67,14 @@ public class IterativePower {
     }
 
     public static void main(String[] args) {
-        double a, pow;
+        double a;
         int n;
 
         a = getDouble();
         n = getInt();
-        pow = iterativePow(a, n);
 
         System.out.printf("%,.2f to the power of %d is %,.2f\n",
-                a, n, pow);
+                a, n, iterativePow(a, n));
     }
 
 }

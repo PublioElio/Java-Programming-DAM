@@ -15,11 +15,9 @@ public class isVowel {
      * @return
      */
     static char getChar() {
-        char c;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a character: ");
-        c = sc.next(".").charAt(0);
-        return (c);
+        return (sc.next(".").charAt(0));
     }
 
     /**
