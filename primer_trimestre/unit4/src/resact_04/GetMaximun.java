@@ -10,26 +10,13 @@ import java.util.Scanner;
  */
 public class GetMaximun {
 
-    public static void main(String[] args) {
-        int n1, n2, max;
-        n1 = get_num("first");
-        n2 = get_num("second");
-        if (n1 != n2) {
-            max = get_max(n1, n2);
-            System.out.printf("The maximum between %d and %d is %d\n",
-                    n1, n2, max);
-        } else {
-            System.out.println("First and second are the same number!");
-        }
-    }
-
     /**
      * This function asks for an integer number
      *
      * @param ordinal this string is the ordinal number entered
      * @return an integer number
      */
-    static int get_num(String ordinal) {
+    static int getNum(String ordinal) {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter %s integer number: ", ordinal);
@@ -44,9 +31,23 @@ public class GetMaximun {
      * @param n2 second number
      * @return the greater value
      */
-    static int get_max(int n1, int n2) {
+    static int getMax(int n1, int n2) {
         int max;
         max = n1 > n2 ? n1 : n2;
         return (max);
     }
+
+    public static void main(String[] args) {
+        int n1, n2, max;
+        n1 = getNum("first");
+        n2 = getNum("second");
+        if (n1 != n2) {
+            max = getMax(n1, n2);
+            System.out.printf("The maximum between %d and %d is %d\n",
+                    n1, n2, max);
+        } else {
+            System.out.println("First and second are the same number!");
+        }
+    }
+
 }
