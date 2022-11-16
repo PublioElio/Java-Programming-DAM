@@ -10,23 +10,16 @@ import java.util.Scanner;
  */
 public class PrimeDivisors {
 
-    public static void main(String[] args) {
-        int num;
-        num = get_num();
-        System.out.printf("Prime divisors of %d: ", num);
-        print_prime_divisors(num);
-    }
-
     /**
      * This function prints the list of prime divisors of a given number
      *
      * @param num the number to check the prime divisors
      */
-    static void print_prime_divisors(int num) {
+    static void printPrimeDivisors(int num) {
         int counter = 0;
         for (int i = 1; i <= num; i++) {
             if (num % i == 0) {
-                if (check_prime(i)) {
+                if (checkPrime(i)) {
                     System.out.printf("%d ", i);
                     counter++;
                 }
@@ -42,7 +35,7 @@ public class PrimeDivisors {
      *
      * @return a positive integer number
      */
-    static int get_num() {
+    static int getNum() {
         int num;
         boolean validNum;
         Scanner sc = new Scanner(System.in);
@@ -63,7 +56,7 @@ public class PrimeDivisors {
      * @param num the number to check if it is prime
      * @return true if the number is prime
      */
-    static boolean check_prime(int num) {
+    static boolean checkPrime(int num) {
         boolean isPrime = true;
         if (num < 2) {
             isPrime = false;
@@ -74,4 +67,12 @@ public class PrimeDivisors {
         }
         return (isPrime);
     }
+
+    public static void main(String[] args) {
+        int num;
+        num = getNum();
+        System.out.printf("Prime divisors of %d: ", num);
+        printPrimeDivisors(num);
+    }
+
 }
