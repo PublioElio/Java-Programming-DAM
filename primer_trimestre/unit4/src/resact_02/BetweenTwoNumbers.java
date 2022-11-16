@@ -40,8 +40,7 @@ public class BetweenTwoNumbers {
     }
 
     /**
-     * This program asks for a number on console on a given order and returns
-     * that number
+     * This function requests a number in a given order and returns that number
      *
      * @param order a string with the ordinal position of the number
      * @return the entered number
