@@ -35,7 +35,7 @@ public class Calculator {
             System.out.println("""
                                Select operation with a number between 1 and 4: 
                                1. Addition 
-                               2. Substraction 
+                               2. Subtraction 
                                3. Multiplication 
                                4. Division""");
             choice = (int) get_num("");
