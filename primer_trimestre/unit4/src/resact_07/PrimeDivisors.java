@@ -18,11 +18,9 @@ public class PrimeDivisors {
     static void printPrimeDivisors(int num) {
         int counter = 0;
         for (int i = 1; i <= num; i++) {
-            if (num % i == 0) {
-                if (checkPrime(i)) {
-                    System.out.printf("%d ", i);
-                    counter++;
-                }
+            if (checkPrime(i) && (num % i == 0)) {
+                System.out.printf("%d ", i);
+                counter++;
             }
         }
         if (counter == 0) {
