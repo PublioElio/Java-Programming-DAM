@@ -54,6 +54,7 @@ public class RecursiveFibonacci {
             }
         } while (n >= 40); // numbers greater than 40 take a long time to calculate
         
-        System.out.println("The '" + n + "' iteration of Fibonacci sequence is: " + recursiveFibonacci(n));
+        System.out.println("The '" + n + "' iteration of Fibonacci sequence is: "
+                + recursiveFibonacci(n));
     }
 }
