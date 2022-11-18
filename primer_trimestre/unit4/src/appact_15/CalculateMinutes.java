@@ -3,6 +3,8 @@ package appact_15;
 import java.util.Scanner;
 
 /**
+ * This program gets two hours in 24h format, and calculates the amount of
+ * minutes between those hours entered
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
@@ -18,10 +20,8 @@ public class CalculateMinutes {
      * @return the total number of minutes between the two given hours
      */
     static int minDifference(int hour1, int min1, int hour2, int min2) {
-        int greaterHour, lesserHour;
-        greaterHour = hour1 > hour2 ? hour1 : hour2;
-        lesserHour = hour1 < hour2 ? hour1 : hour2;
-        return (((greaterHour - (lesserHour - 1)) * 60) + (60 - min1) + (60 - min2));
+        int totalMin = hour1 < hour2 ? ((((hour2 - hour1) * 60) - min1) + min2) : (((((24 - hour1) + hour2) * 60) - min1) + min2);
+        return (totalMin);
     }
 
     /**
@@ -47,11 +47,11 @@ public class CalculateMinutes {
     public static void main(String[] args) {
         int hour1, min1, hour2, min2;
         hour1 = getTime("hour", "first");
-        min1 = getTime("minute", "first");
+        min1 = getTime("hour minutes", "first");
         hour2 = getTime("hour", "second");
-        min2 = getTime("minute", "second");
+        min2 = getTime("hour minutes", "second");
         System.out.printf("""
-                          The difference in minutes between the two entered hours is: %d
+                          The amounr of minutes between the two entered hours is: %d
                           """,
                 minDifference(hour1, min1, hour2, min2));
     }
