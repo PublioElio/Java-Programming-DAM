@@ -3,8 +3,8 @@ package resact_07;
 import java.util.Scanner;
 
 /**
- * This program gets a number by console and prints the list of prime divisors
- * of that number
+ * This program gets an integer by console and shows the number of prime
+ * divisors of that number
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
@@ -15,17 +15,14 @@ public class PrimeDivisors {
      *
      * @param num the number to check the prime divisors
      */
-    static void printPrimeDivisors(int num) {
+    static int printPrimeDivisors(int num) {
         int counter = 0;
-        for (int i = 1; i <= num; i++) {
+        for (int i = 2; i < num; i++) {
             if (checkPrime(i) && (num % i == 0)) {
-                System.out.printf("%d ", i);
                 counter++;
             }
         }
-        if (counter == 0) {
-            System.out.print("That number has no prime divisors.\n");
-        }
+        return (counter);
     }
 
     /**
@@ -69,8 +66,8 @@ public class PrimeDivisors {
     public static void main(String[] args) {
         int num;
         num = getNum();
-        System.out.printf("Prime divisors of %d: ", num);
-        printPrimeDivisors(num);
+        System.out.printf("%d has %d prime divisors\n",
+                num, printPrimeDivisors(num));
     }
 
 }
