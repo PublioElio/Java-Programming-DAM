@@ -19,7 +19,7 @@ public class ShowPairs {
         Scanner sc = new Scanner(System.in);
         do {
             System.out.print("Enter a positive integer and the program will "
-                    + "display that many first even numbers: ");
+                    + "display that many even numbers (starting for '2'): ");
             n = sc.nextInt();
             if (n < 0) {
                 System.out.print("ERROR: invalid imput. ");
@@ -34,7 +34,7 @@ public class ShowPairs {
      * @param n the amount of even numbers to show
      */
     static void showPairs(int n) {
-        for (int i = 0; n > 0; i++) {
+        for (int i = 2; n > 0; i++) {
             if ((i % 2) == 0) {
                 System.out.printf("%d ", i);
                 n--;
