@@ -2,7 +2,7 @@
   <img src="https://media.giphy.com/media/YpZbh3wXqG11aK2zRd/giphy.gif" width="250"/>
 </div>
 
-# Java Programming (1º DAM)
+# Java Programming (1st DAM)
 Java exercises for the Programming subject in 1st year of DAM at the I.E.S. Belen. Most of the exercises in this repository are taken from the Programming manual by [Alfonso Jiménez Martín and Francisco Manuel Pérez Montes (ed. Paraninfo)](https://www.paraninfo.es/catalogo/9788428342865/programacion--edicion-2021-).
 
 ## File structure :file_folder:
