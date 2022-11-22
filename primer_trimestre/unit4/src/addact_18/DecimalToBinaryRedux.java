@@ -3,7 +3,7 @@ package addact_18;
 import static addact_14.CustomMathLib.*;
 
 /**
- * This program turns a decimal number into binary base
+ * This program converts a decimal number into binary base
  *
  * @author Adriano Díaz <Adriano.Díaz>
  */
