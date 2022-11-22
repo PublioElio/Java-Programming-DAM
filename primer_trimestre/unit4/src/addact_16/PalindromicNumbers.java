@@ -1,6 +1,5 @@
 package addact_16;
 
-import java.util.Scanner;
 import static addact_14.CustomMathLib.isPalindromic;
 
 /**

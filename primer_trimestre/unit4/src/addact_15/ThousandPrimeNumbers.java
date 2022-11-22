@@ -1,6 +1,5 @@
 package addact_15;
 
-import java.util.Scanner;
 import static addact_14.CustomMathLib.isPrime;
 
 /**
