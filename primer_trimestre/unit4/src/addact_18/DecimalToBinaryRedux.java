@@ -13,6 +13,7 @@ public class DecimalToBinaryRedux {
         int num, binaryNum = 0;
         System.out.print("Enter a number in decimal base: ");
         num = getPositiveInt();
+        
 
         if (num != 0) {
             binaryNum = 1;

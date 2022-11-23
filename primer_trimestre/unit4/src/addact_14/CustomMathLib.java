@@ -112,12 +112,15 @@ public class CustomMathLib {
      * @return the digit
      */
     public static int digitN(int num, int n) {
-        num = reverse(num);
-        while (n > 0) {
-            num /= 10;
-            n--;
+        int digit = 0, exp = 0;
+        for (int i = (digits(num) - 1); i >= 0; i--) {
+            if (i == n) {
+                digit = num / power(10, exp);
+                digit %= 10;
+            }
+            exp++;
         }
-        return (num % 10);
+        return (digit);
     }
 
     /**
@@ -129,10 +132,16 @@ public class CustomMathLib {
      * @return the position of the digit
      */
     public static int digitPosition(int num, int digit) {
-        int position;
-        for (position = 0; (position < digits(num)) && (digitN(num, position) != digit); position++) {
+        int position = 0;
+        boolean found = false;
+        while (position < digits(num) && !found) {
+            if (digitN(num, position) != digit) {
+                position++;
+            } else {
+                found = true;
+            }
         }
-        position = (position == digits(num)) ? -1 : position;
+        position = found ? position : -1;
         return (position);
     }
 
@@ -162,8 +171,10 @@ public class CustomMathLib {
      * @return the new number
      */
     public static int eraseLeft(int num, int digits) {
-        num = eraseRight(reverse(num), (digits + 1));
-        return (reverse(num));
+        for (int i = 0; i < digits; i++) {
+            num -= digitN(num, 0) * power(10, (digits(num) - 1));
+        }
+        return (num);
     }
 
     /**
@@ -174,7 +185,8 @@ public class CustomMathLib {
      * @return the new number
      */
     public static int appendRight(int num, int digit) {
-        return ((num * 10) + digit);
+        num = num >= 0 ? (num * 10) + digit : (((num * -1) * 10) + digit) * -1;
+        return (num);
     }
 
     /**
@@ -185,8 +197,15 @@ public class CustomMathLib {
      * @return the new number
      */
     public static int appendLeft(int num, int digit) {
-        num = appendRight(reverse(num), digit);
-        return (reverse(num));
+        if (num == 0) {
+            num = digit * 10;
+        } else if (num < 0) {
+            num = Math.abs(num);
+            num = (digit * power(10, digits(num)) + num) * -1;
+        } else {
+            num = digit * power(10, digits(num)) + num;
+        }
+        return (num);
     }
 
     /**
@@ -200,14 +219,13 @@ public class CustomMathLib {
      */
     public static int numberPiece(int num, int start, int end) {
         int lenght = digits(num);
-        num = eraseLeft(num, start - 1);
-        num = eraseRight(num, lenght - end);
-
+        num = eraseLeft(num, start);
+        num = eraseRight(num, lenght - (end - 1));
         return (num);
     }
 
     /**
-     * This function gets two numbers and puts them together
+     * This function gets two numbers and puts them together, one after another
      *
      * @param num first number
      * @param num2 second number
