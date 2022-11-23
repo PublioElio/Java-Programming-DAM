@@ -17,7 +17,7 @@ public class PrimeDivisorsRedux {
      */
     static void printPrimeDivisors(int num) {
         int counter = 0;
-        for (int i = 2; i < num; i++) {
+        for (int i = 2; i <= num; i++) {
             if (checkPrime(i) && (num % i == 0)) {
                 System.out.printf("%d ", i);
                 counter++;
