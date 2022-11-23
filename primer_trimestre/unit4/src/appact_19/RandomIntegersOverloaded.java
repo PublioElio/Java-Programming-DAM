@@ -80,7 +80,7 @@ public class RandomIntegersOverloaded {
 
         do {
             System.out.print("Do you want to define a range for "
-                    + "the random numbers? (yes/no)");
+                    + "the random numbers? (yes/no) ");
             answer = sc.nextLine().toLowerCase();
             switch (answer) {
                 case "yes" ->
