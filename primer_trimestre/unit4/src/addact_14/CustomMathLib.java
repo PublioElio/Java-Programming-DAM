@@ -162,7 +162,7 @@ public class CustomMathLib {
      * @return the new number
      */
     public static int eraseLeft(int num, int digits) {
-        num = eraseRight(reverse(num), digits);
+        num = eraseRight(reverse(num), (digits + 1));
         return (reverse(num));
     }
 
