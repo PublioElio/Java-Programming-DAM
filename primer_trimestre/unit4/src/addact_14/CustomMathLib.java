@@ -235,6 +235,23 @@ public class CustomMathLib {
         return (num);
     }
 
+    /**
+     * This function checks a if an integer is a valid binary number
+     *
+     * @param num the number to check if it's binary
+     * @return true or false
+     */
+    public static boolean isBinary(int num) {
+        int digit;
+        boolean isBinary = true;
+        while ((num > 0) && isBinary) {
+            digit = num % 10;
+            isBinary = digit < 2;
+            num /= 10;
+        }
+        return (isBinary);
+    }
+
     public static void main(String[] args) {
         int num, power, n, start, end;
 
@@ -364,7 +381,7 @@ public class CustomMathLib {
         /* Test appendNumber() */
         System.out.printf("-> Enter another number to append in %d: ", num);
         n = getPositiveInt();
-        
+
         System.out.printf("14. %d and %d together are: %d.\n",
                 num, n, appendNumber(num, n));
     }
