@@ -3,11 +3,18 @@ package resact_03;
 import java.util.Scanner;
 
 /**
+ * This program ask the user for the lenght of an array, then the user enters
+ * the elements of the array and the program shows the elements in reverse order
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
 public class PrintReverseList {
 
+    /**
+     * This function gets a positive integer number of value '1' or more
+     *
+     * @return a positive integer number
+     */
     static int getPositiveInt() {
         int num;
         do {
@@ -22,6 +29,12 @@ public class PrintReverseList {
         return (num);
     }
 
+    /**
+     * This function asks for an integer value for each element of the array
+     *
+     * @param list the array to fill of elements
+     * @return the list with all the elements
+     */
     static int[] fillList(int[] list) {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < list.length; i++) {
@@ -31,17 +44,28 @@ public class PrintReverseList {
         return (list);
     }
 
+    /**
+     * This function prints on console a list, in reversed order
+     *
+     * @param list the list to print on console
+     */
     static void printReversedList(int[] list) {
-        for (int i = (list.length -1); i >= 0; i--) {
-            System.out.print(list[i] + ", ");
+        for (int i = (list.length - 1); i >= 0; i--) {
+            if (i == 0) {
+                System.out.printf("%d.\n", list[i]);
+            } else {
+                System.out.printf("%d, ", list[i]);
+            }
         }
     }
 
     public static void main(String[] args) {
         int lenght;
+        System.out.print("Lenght of the array. ");
         lenght = getPositiveInt();
         int numberList[] = new int[lenght];
         numberList = fillList(numberList);
+        System.out.print("The elements of the list are: ");
         printReversedList(numberList);
 
     }
