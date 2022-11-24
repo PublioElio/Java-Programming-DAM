@@ -14,11 +14,11 @@ public class ShowFiveNumbers {
     /**
      * This function ask the user to fill a list of decimal numbers
      *
-     * @param listLenght the lenght of the list to fill
+     * @param listlength the length of the list to fill
      * @return the array
      */
-    static double[] getNumbers(int listLenght) {
-        double numList[] = new double[listLenght];
+    static double[] getNumbers(int listlength) {
+        double numList[] = new double[listlength];
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
 

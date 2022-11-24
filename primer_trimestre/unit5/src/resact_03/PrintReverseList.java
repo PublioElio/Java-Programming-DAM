@@ -3,7 +3,7 @@ package resact_03;
 import java.util.Scanner;
 
 /**
- * This program ask the user for the lenght of an array, then the user enters
+ * This program ask the user for the length of an array, then the user enters
  * the elements of the array and the program shows the elements in reverse order
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
@@ -22,7 +22,7 @@ public class PrintReverseList {
             Scanner sc = new Scanner(System.in);
             num = sc.nextInt();
             if (num < 1) {
-                System.out.print("ERROR: list lenght must be '1' or more . "
+                System.out.print("ERROR: list length must be '1' or more . "
                         + "Enter a positive integer number: ");
             }
         } while (num < 1);
@@ -60,7 +60,7 @@ public class PrintReverseList {
     }
 
     public static void main(String[] args) {
-        System.out.print("Lenght of the array. ");
+        System.out.print("Length of the array. ");
         int numberList[] = new int[getPositiveInt()];
         numberList = fillList(numberList);
         System.out.print("The elements of the list are: ");
