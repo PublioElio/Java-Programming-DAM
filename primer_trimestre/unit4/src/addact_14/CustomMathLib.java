@@ -132,9 +132,9 @@ public class CustomMathLib {
      * @return the position of the digit
      */
     public static int digitPosition(int num, int digit) {
-        int position = 0;
+        int position = 0, length = digits(num);
         boolean found = false;
-        while (position < digits(num) && !found) {
+        while (position < length && !found) {
             if (digitN(num, position) != digit) {
                 position++;
             } else {
