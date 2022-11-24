@@ -73,10 +73,10 @@ public class CustomMathLib {
     }
 
     /**
-     * This function gets the total lenght of digits of a given integer
+     * This function gets the total length of digits of a given integer
      *
-     * @param num the number to get lenght
-     * @return the lenght in digits
+     * @param num the number to get length
+     * @return the length in digits
      */
     public static int digits(int num) {
         int digits = 0;
@@ -218,9 +218,9 @@ public class CustomMathLib {
      * @return the new number
      */
     public static int numberPiece(int num, int start, int end) {
-        int lenght = digits(num);
+        int length = digits(num);
         num = eraseLeft(num, start);
-        num = eraseRight(num, lenght - (end - 1));
+        num = eraseRight(num, length - (end - 1));
         return (num);
     }
 
