@@ -171,9 +171,7 @@ public class CustomMathLib {
      * @return the new number
      */
     public static int eraseLeft(int num, int digits) {
-        for (int i = 0; i < digits; i++) {
-            num -= digitN(num, 0) * power(10, (digits(num) - 1));
-        }
+        num %= power(10, digits(num) - digits);
         return (num);
     }
 
