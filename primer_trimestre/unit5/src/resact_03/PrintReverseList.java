@@ -60,10 +60,8 @@ public class PrintReverseList {
     }
 
     public static void main(String[] args) {
-        int lenght;
         System.out.print("Lenght of the array. ");
-        lenght = getPositiveInt();
-        int numberList[] = new int[lenght];
+        int numberList[] = new int[getPositiveInt()];
         numberList = fillList(numberList);
         System.out.print("The elements of the list are: ");
         printReversedList(numberList);
