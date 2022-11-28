@@ -15,11 +15,11 @@ public class ArithmeticMean {
         double mean;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter first score: ");
+        System.out.print("Enter first score: ");
         rating1 = sc.nextInt();
-        System.out.println("Enter second score: ");
+        System.out.print("Enter second score: ");
         rating2 = sc.nextInt();
-        mean = (rating1 + rating2) / 2;
+        mean = (double)(rating1 + rating2) / 2;
         System.out.println("The arithmetic mean is: " + mean);
     }
 }

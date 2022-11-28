@@ -16,7 +16,7 @@ public class UserAgeCalculator {
         boolean adulthood;
         int actualYear = Year.now().getValue(); // to get the actual year
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please, insert your year of birth: ");
+        System.out.print("Please, insert your year of birth: ");
         birthDate = sc.nextInt();
         age = actualYear - birthDate;
         System.out.println("Now, you have " + age + " years.");

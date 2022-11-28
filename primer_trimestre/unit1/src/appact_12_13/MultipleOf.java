@@ -14,7 +14,7 @@ public class MultipleOf {
     public static void main(String[] args) {
         int n, m, dif;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
+        System.out.print("Enter a number: ");
         n = sc.nextInt();
         dif = n % 7;
         dif = (dif - 7) < 0 ? (dif - 7) * -1 : dif - 7;
@@ -22,7 +22,7 @@ public class MultipleOf {
         System.out.printf("""
                           You must add %d to %d to make it multiple of seven
                           """, dif, n);
-        System.out.println("""
+        System.out.print("""
                            
                            -----------------------------------------------
                            

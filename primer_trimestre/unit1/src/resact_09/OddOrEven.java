@@ -12,7 +12,7 @@ public class OddOrEven {
     public static void main(String[] args) {
         int num;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Insert a numer: ");
+        System.out.print("Insert a numer: ");
         num = sc.nextInt();
         if ((num % 2) == 0) {
             System.out.println("Thats an even number");

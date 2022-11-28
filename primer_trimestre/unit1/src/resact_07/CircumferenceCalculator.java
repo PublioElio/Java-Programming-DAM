@@ -13,7 +13,7 @@ public class CircumferenceCalculator {
     public static void main(String[] args) {
         double cir, radius, area;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the radius of a circle: ");
+        System.out.print("Enter the radius of a circle: ");
         radius = sc.nextDouble();
         cir = 2 * (Math.PI * radius);
         area = Math.PI * Math.pow(radius, 2);
