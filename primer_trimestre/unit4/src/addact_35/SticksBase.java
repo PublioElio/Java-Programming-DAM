@@ -17,12 +17,13 @@ public class SticksBase {
      */
     public static String sticksBase(int n) {
         String result = "";
+        int length = digits(n);
 
-        for (int i = 0; i < digits(n); i++) {
+        for (int i = 0; i < length; i++) {
             for (int j = 0; j < digitN(n, i); j++) {
                 result += "|";
             }
-            if (i < digits(n) - 1) {
+            if (i < (length - 1)) {
                 result += "-";
             }
         }
