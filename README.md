@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/YpZbh3wXqG11aK2zRd/giphy.gif" width="250"/>
+  <img src="https://media.giphy.com/media/qUABlXKRRvfQobzIXp/giphy.gif" width="250"/>
 </div>
 
 # Java Programming (1st year of Cross-Platform Application Development)
