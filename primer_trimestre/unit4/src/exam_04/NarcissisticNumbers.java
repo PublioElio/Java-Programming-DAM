@@ -1,6 +1,7 @@
 package exam_04;
 
 /**
+ * This program prints on terminal the 20 first narcissistic numbers
  *
  * @author Adriano Díaz <Adriano.Díaz>
  */
