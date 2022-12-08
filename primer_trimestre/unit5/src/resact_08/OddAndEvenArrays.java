@@ -1,5 +1,6 @@
 package resact_08;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -27,8 +28,8 @@ public class OddAndEvenArrays {
         } while (size <= 0);
         return (size);
     }
-    
-        /**
+
+    /**
      * This function ask the user to fill the list with integers
      *
      * @param size the length of the list
@@ -41,16 +42,44 @@ public class OddAndEvenArrays {
             System.out.printf("Enter number for position %d: ", i);
             filledList[i] = sc.nextInt();
         }
+        Arrays.sort(filledList);
         return (filledList);
     }
 
-    public static void main(String[] args) {
-        int size = getListSize("Enter the size of the lists: ",
-                "ERROR: list size minimum '1'. ");
-        int originalList[] = getListElements(size);
+    static int getLength(int[] list, boolean isEven) {
+        int length = 0;
 
-        
-        
+        for (int i = 0; i < list.length; i++) {
+if()
+        }
+
+        return (length);
+    }
+
+    static int[] createList(int[] list, boolean isEven) {
+        int newList[];
+        int counter = 0;
+
+        for (int i = 0; i < list.length; i++) {
+            if (isEven) {
+                if  {
+
+                }
+            } else {
+            }
+        }
+
+        return (newList);
+    }
+
+    public static void main(String[] args) {
+        int size;
+        int originalList[], evenList[], oddList[];
+        size = getListSize("Enter the size of the lists: ",
+                "ERROR: list size minimum '1'. ");
+        originalList = getListElements(size);
+        evenList = createList(originalList, true);
+
     }
 
 }

@@ -11,6 +11,28 @@ import java.util.Scanner;
  */
 public class FillEvenNumbers {
 
+    public static void swap(int[] array, int i, int j) {
+        int aux = array[i];
+        array[i] = array[j];
+        array[j] = aux;
+    }
+
+    public static void bubbleSort(int[] array) {
+        boolean swapped = false;
+        int last = 0;
+
+        do {
+            swapped = false;
+            for (int i = 0; i < (array.length - 1 - last); i++) {
+                if (array[i] > array[i + 1]) {
+                    swap(array, i, i + 1);
+                    swapped = true;
+                }
+            }
+            last++;
+        } while (swapped);
+    }
+
     /**
      * This function gets the parameters for the list (length and end of range)
      *
@@ -42,14 +64,14 @@ public class FillEvenNumbers {
         int counter = 0, num;
         int list[] = new int[length];
         while (counter < length) {
-            num = (int) (Math.random() * end) + 2;
+            num = (int) (Math.random() * end) + 1;
             if (num % 2 == 0) {
                 list[counter] = num;
                 counter++;
             }
 
         }
-        Arrays.sort(list);
+        bubbleSort(list);
         return (list);
     }
 

@@ -22,7 +22,7 @@ public class Lottery {
         for (int i = 0; i < randomList.length; i++) {
             randomList[i] = (int) ((Math.random() * 11) - 1);
         }
-        Arrays.sort(randomList);
+        Arrays.sort(randomList); // introducir algoritmo de ordenación
         return (randomList);
     }
 
