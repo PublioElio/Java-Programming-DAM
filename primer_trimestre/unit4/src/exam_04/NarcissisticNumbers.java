@@ -7,44 +7,68 @@ package exam_04;
  */
 public class NarcissisticNumbers {
 
-    public static int potencia(int base, int exponente) {
-        int potencia = 1;
-        if (exponente == 0) {
-            potencia = 1;
+    /**
+     * This function calculates the power of a number
+     *
+     * @param base the base number
+     * @param power
+     * @return the result
+     */
+    public static int power(int base, int power) {
+        int result = 1;
+        if (power == 0) {
+            result = 1;
         } else {
-            for (int i = 1; i <= exponente; i++) {
-                potencia *= base;
+            for (int i = 1; i <= power; i++) {
+                result *= base;
             }
         }
-        return (potencia);
+        return (result);
     }
 
-    static boolean esNarcisista(int num) {
-        int numDigitos = longitudNumero(num);
+    /**
+     * This function checks if a number is narcissistic
+     *
+     * @param num
+     * @return true or false
+     */
+    static boolean isNarcissistic(int num) {
+        int digitNumber = length(num);
         int rdo = 0, resto = 0, aux = num;
         while (aux > 0) {
             resto = aux % 10;
-            rdo += potencia(resto, numDigitos);
+            rdo += power(resto, digitNumber);
             aux /= 10;
         }
         return (rdo == num);
     }
 
-    static int longitudNumero(int num) {
-        int digitos = 0;
+    /**
+     * This function gives the length (in digits) of a number
+     *
+     * @param num
+     * @return
+     */
+    static int length(int num) {
+        int digits = 0;
         while (num > 0) {
-            digitos++;
+            digits++;
             num /= 10;
         }
-        return (digitos);
+        return (digits);
     }
 
-    static void imprimeNarcisistas(int LIMITE) {
-        int cont = 0, num = 0;
-        while (cont < LIMITE) {
-            if (esNarcisista(num)) {
+    /**
+     * This function prints a list of narcissistic numbers
+     *
+     * @param LIMIT how many numbers will be printed on terminal
+     */
+    static void printNarcissistic(int LIMIT) {
+        int count = 0, num = 0;
+        while (count < LIMIT) {
+            if (isNarcissistic(num)) {
                 System.out.println(num + " ");
-                cont++;
+                count++;
                 num++;
             } else {
                 num++;
@@ -53,9 +77,9 @@ public class NarcissisticNumbers {
     }
 
     public static void main(String[] args) {
-        System.out.println("Primeros 20 números narcisistas: ");
-        int LIMITE = 20;
-        imprimeNarcisistas(LIMITE);
+        System.out.println("First 20 narcissistic numbers: ");
+        int LIMIT = 20;
+        printNarcissistic(LIMIT);
     }
 
 }
