@@ -46,31 +46,31 @@ public class OddAndEvenArrays {
         return (filledList);
     }
 
-    static int getLength(int[] list, boolean isEven) {
-        int length = 0;
+//    static int getLength(int[] list, boolean isEven) {
+//        int length = 0;
+//
+//        for (int i = 0; i < list.length; i++) {
+//if()
+//        }
+//
+//        return (length);
+//    }
 
-        for (int i = 0; i < list.length; i++) {
-if()
-        }
-
-        return (length);
-    }
-
-    static int[] createList(int[] list, boolean isEven) {
-        int newList[];
-        int counter = 0;
-
-        for (int i = 0; i < list.length; i++) {
-            if (isEven) {
-                if  {
-
-                }
-            } else {
-            }
-        }
-
-        return (newList);
-    }
+//    static int[] createList(int[] list, boolean isEven) {
+//        int newList[];
+//        int counter = 0;
+//
+//        for (int i = 0; i < list.length; i++) {
+//            if (isEven) {
+//                if  {
+//
+//                }
+//            } else {
+//            }
+//        }
+//
+//        return (newList);
+//    }
 
     public static void main(String[] args) {
         int size;
@@ -78,7 +78,7 @@ if()
         size = getListSize("Enter the size of the lists: ",
                 "ERROR: list size minimum '1'. ");
         originalList = getListElements(size);
-        evenList = createList(originalList, true);
+//        evenList = createList(originalList, true);
 
     }
 

@@ -32,15 +32,13 @@ public class MaxValueArray {
      * This function asks the user to fill a list of values
      *
      * @param list the list to fill elements
-     * @return the filled list
      */
-    static int[] getListValues(int[] list) {
+    static void getListValues(int[] list) {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < list.length; i++) {
             System.out.printf("Enter value for postion %d: ", i);
             list[i] = sc.nextInt();
         }
-        return (list);
     }
 
     /**
@@ -61,7 +59,7 @@ public class MaxValueArray {
         System.out.print("Length of the list. ");
         int list[] = new int[getListLength()];
         System.out.print("List elements. ");
-        list = getListValues(list);
+        getListValues(list);
         System.out.printf("The maximum value of this list is %d\n",
                 getMaxValue(list));
     }

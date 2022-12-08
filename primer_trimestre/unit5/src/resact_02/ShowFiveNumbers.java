@@ -14,20 +14,17 @@ public class ShowFiveNumbers {
     /**
      * This function ask the user to fill a list of decimal numbers
      *
-     * @param listlength the length of the list to fill
-     * @return the array
+     * @param listlength the list to fill
      */
-    static double[] getNumbers(int listlength) {
-        double numList[] = new double[listlength];
+    static void getNumbers(double[] array) {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
 
-        for (int i = 0; i < numList.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.printf("Enter the decimal number for "
                     + "position %d: ", i);
-            numList[i] = sc.nextDouble();
+            array[i] = sc.nextDouble();
         }
-        return (numList);
     }
 
     /**
@@ -43,7 +40,7 @@ public class ShowFiveNumbers {
 
     public static void main(String[] args) {
         double numList[] = new double[5];
-        numList = getNumbers(numList.length);
+        getNumbers(numList);
         printList(numList);
     }
 

@@ -58,7 +58,7 @@ public class SearchValue {
      * @param list the array to fill of values
      * @return the filled list
      */
-    static int[] fillList(int list[]) {
+    static void fillList(int list[]) {
         int element;
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < list.length; i++) {
@@ -66,7 +66,6 @@ public class SearchValue {
             element = sc.nextInt();
             list[i] = element;
         }
-        return (list);
     }
 
     public static void main(String[] args) {
@@ -74,7 +73,7 @@ public class SearchValue {
         System.out.print("List length. ");
         int list[] = new int[getInteger(1)];
         System.out.print("Fill the list with values. ");
-        list = fillList(list);
+        fillList(list);
         System.out.print("Enter a value to search in the list. ");
         key = getInteger(-1);
         found = search(list, key);

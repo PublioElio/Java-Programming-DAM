@@ -32,16 +32,15 @@ public class PrintReverseList {
     /**
      * This function asks for an integer value for each element of the array
      *
-     * @param list the array to fill of elements
-     * @return the list with all the elements
+     * @param array the array to fill of elements
      */
-    static int[] fillList(int[] list) {
+    static void fillList(int[] array) {
         Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < list.length; i++) {
-            System.out.printf("Enter an integer for position %d: ", i);
-            list[i] = sc.nextInt();
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf("Enter an integer for position %d: ", 
+                    i);
+            array[i] = sc.nextInt();
         }
-        return (list);
     }
 
     /**
@@ -62,8 +61,8 @@ public class PrintReverseList {
     public static void main(String[] args) {
         System.out.print("Length of the array. ");
         int numberList[] = new int[getPositiveInt()];
-        numberList = fillList(numberList);
-        System.out.print("The elements of the list are: ");
+        fillList(numberList);
+        System.out.print("The inverted elements of the list are: ");
         printReversedList(numberList);
 
     }
