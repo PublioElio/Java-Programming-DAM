@@ -29,7 +29,7 @@ public class ShuffleArray {
      * @param array the array to modify
      */
     static void shuffleArray(int[] array) {
-        int aux, randomPosition;
+        int randomPosition;
         for (int i = 0; i < array.length; i++) {
             do {
                 randomPosition = (int) (Math.random() * (array.length - 1) + 1);
