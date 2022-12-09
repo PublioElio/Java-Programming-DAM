@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * This program makes the binary search in a sorted array whith different elements, entered by the user
+ * This program makes the binary search in a sorted array
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
@@ -54,12 +54,13 @@ public class binarySearch {
 
     public static void main(String[] args) {
         int pos, num;
+        
+        /* uncomment different arrays to test */
         int[] numbers = {0, 1, 2, 3, 4};
 //        int[] numbers = {15, 20, 25, 30, 35, 40, 45};
 //        int[] numbers = {-5, -10, 2, 20, 40, 112, 125};
 
-       
-        num = getInt(false, 
+        num = getInt(false,
                 "Enter a value to search in the array: ");
 
         pos = binarySearch(numbers, num);
