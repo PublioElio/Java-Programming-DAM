@@ -4,45 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * This program makes the binary search in a sorted array, entered by the user
+ * This program makes the binary search in a sorted array whith different elements, entered by the user
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
 public class binarySearch {
-
-    /**
-     * This is a function to swap values in an array
-     *
-     * @param array
-     * @param i
-     * @param j
-     */
-    static void swap(int[] array, int i, int j) {
-        int aux = array[i];
-        array[i] = array[j];
-        array[j] = aux;
-    }
-
-    /**
-     * This is the bubble sorting method
-     *
-     * @param array
-     */
-    static void bubbleSort(int[] array) {
-        boolean swapped = false;
-        int end = 0;
-
-        do {
-            swapped = false;
-            for (int i = 0; i < (array.length - 1 - end); i++) {
-                if (array[i] > array[i + 1]) {
-                    swap(array, i, i + 1);
-                    swapped = true;
-                }
-            }
-            end++;
-        } while (swapped);
-    }
 
     /**
      * This function makes a binary search in a sorted array
@@ -52,9 +18,9 @@ public class binarySearch {
      * @return the first occurrence of that key in the array
      */
     static int binarySearch(int[] array, int key) {
-        int position = -1, start = 0, end = (array.length - 1),
-                mid = ((start + end) / 2);
+        int position = -1, start = 0, end = (array.length - 1), mid;
         while ((start <= end) && (position < 0)) {
+            mid = (start + end) / 2;
             if (array[mid] < key) {
                 start = mid + 1;
             } else if (array[mid] == key) {
@@ -62,7 +28,6 @@ public class binarySearch {
             } else {
                 end = mid - 1;
             }
-            mid = (start + end) / 2;
         }
         return (position);
     }
@@ -87,32 +52,16 @@ public class binarySearch {
         return (num);
     }
 
-    /**
-     * This function fills an array woth integers
-     * 
-     * @param array 
-     */
-    static void fillArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = getInt(false, 
-                    "Enter a value for position " + i + " : ");
-        }
-    }
-
     public static void main(String[] args) {
-        int num, pos;
-        int[] numbers = new int[getInt(true, 
-                "Enter the lenght of the array: ")];
-        
-        fillArray(numbers);
-        
-        bubbleSort(numbers);
-        
-        System.out.println("Sorted array with bubble sort: "
-                + Arrays.toString(numbers));
-        
+        int pos, num;
+        int[] numbers = {0, 1, 2, 3, 4};
+//        int[] numbers = {15, 20, 25, 30, 35, 40, 45};
+//        int[] numbers = {-5, -10, 2, 20, 40, 112, 125};
+
+       
         num = getInt(false, 
                 "Enter a value to search in the array: ");
+
         pos = binarySearch(numbers, num);
 
         if (pos < 0) {
