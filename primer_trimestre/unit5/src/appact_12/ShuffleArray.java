@@ -32,7 +32,7 @@ public class ShuffleArray {
         int randomPosition;
         for (int i = 0; i < array.length; i++) {
             do {
-                randomPosition = (int) (Math.random() * (array.length - 1) + 1);
+                randomPosition = (int) (Math.random() * array.length);
             } while (randomPosition == i);
             swap(array, i, randomPosition);
         }
