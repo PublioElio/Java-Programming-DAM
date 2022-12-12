@@ -11,62 +11,53 @@ import java.util.Arrays;
 public class ShuffleAndCopy {
 
     /**
-     * This function fills an array with the same value (the length of the array
-     * + 1)
+     * This function copys an array
      *
-     * @param array the array to fill
+     * @param array the array to copy
+     * @return
      */
-    static void fillWithNumbers(int[] array) {
+    static int[] arrayCopy(int[] array) {
+        int[] copy = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            array[i] = array.length;
+            copy[i] = array[i];
         }
+        return (copy);
+    }
+    
+        /**
+     * This function swaps two elements of an array
+     *
+     * @param array the array to swap
+     * @param i first element
+     * @param j second element
+     */
+    static void swap(int[] array, int i, int j) {
+        int aux;
+        aux = array[i];
+        array[i] = array[j];
+        array[j] = aux;
     }
 
     /**
-     * This function checks if an index is already saved in the auxiliary array
+     * This function shuffles the elements of an array randomly
      *
-     * @param array the array to check
-     * @param key the position (index) to search
-     * @return if the key is found or not
+     * @param array the array to modify
      */
-    static boolean isRepeated(int[] array, int key) {
-        boolean repeated = false;
-        for (int i = 0; i < array.length && !repeated; i++) {
-            repeated = array[i] == key;
-        }
-        return (repeated);
-    }
-
-    /**
-     * This function shuffles the elements of an array randomly and copies them
-     * in a new array
-     *
-     * @param array the array to copy shuffled
-     */
-    static int[] shuffleAndCopy(int[] array) {
-        int randomPosition, counter = 0;
-        boolean repeated;
-        int[] newArray = new int[array.length];
-        int[] aux = new int[array.length]; // to save the used positions
-        fillWithNumbers(aux);
-
-        for (int i = 0; i < newArray.length; i++) {
+    static void shuffleArray(int[] array) {
+        int randomPosition;
+        for (int i = 0; i < array.length; i++) {
             do {
                 randomPosition = (int) (Math.random() * array.length);
-                repeated = isRepeated(aux, randomPosition);
-                if (!repeated) {
-                    aux[counter++] = randomPosition;
-                }
-            } while (repeated);
-            newArray[i] = array[randomPosition];
+            } while (randomPosition == i);
+            swap(array, i, randomPosition);
         }
-        return (newArray);
     }
 
     public static void main(String[] args) {
         int[] num = {1, 2, 3, 4, 5};
         System.out.println("Original array: " + Arrays.toString(num));
-        int[] copy = shuffleAndCopy(num);
+        int[] copy = arrayCopy(num);
+        shuffleArray(copy);
         System.out.println("Shuffled array: "
                 + Arrays.toString(copy));
     }
