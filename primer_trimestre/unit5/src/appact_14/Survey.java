@@ -13,23 +13,25 @@ import java.util.Locale;
 public class Survey {
 
     /**
-     * This function gets a positive real number, with minimum value of '1'
+     * This function gets a positive real number, with minimum value
      *
+     * @param min the minimum value entered
      * @param message a message to show on terminal
      * @param errorMessage an error message to show on terminal
      * @return a real number
      */
-    static double getPositiveNumber(String message, String errorMessage) {
+    static double getPositiveNumber(int min, String message,
+            String errorMessage) {
         double num;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.US);
         do {
             System.out.print(message);
             num = sc.nextDouble();
-            if (num < 1) {
+            if (num < min) {
                 System.out.print(errorMessage);
             }
-        } while (num < 1);
+        } while (num < min);
         return (num);
     }
 
@@ -40,7 +42,7 @@ public class Survey {
      */
     static void getSalary(double[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = getPositiveNumber(
+            array[i] = getPositiveNumber(1,
                     "Enter salary for position " + i + " : ",
                     "ERROR: salary must be minimum '1'. ");
         }
@@ -78,20 +80,6 @@ public class Survey {
     }
 
     /**
-     * This function gets the maximun value in an array
-     *
-     * @param array
-     * @return the maximun value
-     */
-    static double getMaxSalary(double[] array) {
-        double max = array[0];
-        for (int i = 1; i < array.length; i++) {
-            max = array[i] > max ? array[i] : max;
-        }
-        return (max);
-    }
-
-    /**
      * This function makes the arithmetic mean of all the values in an array
      *
      * @param array
@@ -117,22 +105,21 @@ public class Survey {
     }
 
     public static void main(String[] args) {
-        double maxSalary, arithmeticMean;
-        int surveyTotal = (int) getPositiveNumber(
+        double arithmeticMean;
+        int surveyTotal = (int) getPositiveNumber(1,
                 "Enter the total number of surveys taken: ",
                 "ERROR: number of surveys minimum '1'. ");
 
         double[] surveys = new double[surveyTotal];
         getSalary(surveys);
         reverseSelectionSort(surveys);
-        maxSalary = getMaxSalary(surveys);
         arithmeticMean = getArithmeticMean(surveys);
-
 
         /* result prints */
         System.out.print("Array reversed: ");
         printArray(surveys);
-        System.out.println("\nMax value: " + maxSalary);
+        System.out.println("\nMax value: " + surveys[0]);
+        System.out.println("Min value: " + surveys[(surveys.length - 1)]);
         System.out.println("Arithmetic mean: " + arithmeticMean);
 
     }
