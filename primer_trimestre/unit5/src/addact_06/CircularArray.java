@@ -13,28 +13,35 @@ public class CircularArray {
     /**
      * This function gets an integer number from the user
      *
-     * @param min if a minimum value is required
      * @param minValue the minimum value to ve requested
      * @param message a messaje to show to the user
      * @param errorMessage an error message if a minimum value isn't entered
      * @return an integer
      */
-    static int getInteger(boolean min, int minValue, String message,
-            String errorMessage) {
+    static int getInteger(int minValue, String message, String errorMessage) {
         int num;
         Scanner sc = new Scanner(System.in);
-        if (min) {
-            do {
-                System.out.print(message);
-                num = sc.nextInt();
-                if (num < minValue) {
-                    System.out.println(errorMessage);
-                }
-            } while (num < minValue);
-        } else {
+        do {
             System.out.print(message);
             num = sc.nextInt();
-        }
+            if (num < minValue) {
+                System.out.println(errorMessage);
+            }
+        } while (num < minValue);
+        return (num);
+    }
+
+    /**
+     * This function gets an integer number from the user
+     *
+     * @param message a messaje to show to the user
+     * @return an integer
+     */
+    static int getInteger(String message) {
+        int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.print(message);
+        num = sc.nextInt();
         return (num);
     }
 
@@ -45,8 +52,7 @@ public class CircularArray {
      */
     static void fillArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = getInteger(false, 0,
-                    "Enter a element for position " + i + ": ", "");
+            array[i] = getInteger("Enter a element for position " + i + ": ");
         }
     }
 
@@ -65,8 +71,7 @@ public class CircularArray {
 
     public static void main(String[] args) {
         int length;
-        length = getInteger(true, 1,
-                "Enter the array length: ",
+        length = getInteger(1, "Enter the array length: ",
                 "ERROR: min value of '1'");
         int[] array = new int[length];
         fillArray(array);
