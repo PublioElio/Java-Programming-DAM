@@ -30,6 +30,7 @@ public class MergeTwoSortedArrays {
         while (index2 < n2) {
             array3[index3++] = array2[index2++];
         }
+
     }
 
     public static void main(String[] args) {
