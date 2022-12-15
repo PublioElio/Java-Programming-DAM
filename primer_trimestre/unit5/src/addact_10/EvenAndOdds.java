@@ -36,7 +36,7 @@ public class EvenAndOdds {
      * @param array
      */
     static void arrangeEvenAndOdds(int[] array) {
-        int aux, end = 0;
+        int end = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 for (int j = i; j > 0 + end; j--) {
