@@ -54,7 +54,7 @@ public class CopyNonRepeatedElements {
      */
     static void printList(int[] list) {
         for (int num : list) {
-            System.out.print(num);
+            System.out.print(num + " ");
         }
     }
 
