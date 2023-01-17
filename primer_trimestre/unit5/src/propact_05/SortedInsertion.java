@@ -52,16 +52,15 @@ public class SortedInsertion {
     }
 
     /**
-     * This function creates an array of integer numbers, between two values,
-     * asking the user to fill the array using the terminal
+     * This function fills an array with integer numbers, between two values,
+     * asking the user to enter the numbers by terminal
      *
-     * @param array
-     * @param min
-     * @param max
-     * @param random
-     * @return
+     * @param array the array to fill
+     * @param min minimum value
+     * @param max maximum value
+     * @return the array, filled
      */
-    static void createArray(int[] array, int min, int max) {
+    static void fillArray(int[] array, int min, int max) {
         for (int i = 0; i < array.length; i++) {
             array[i] = getNumber("Enter a number for "
                     + "position " + i + ": ", "ERROR. Number must be "
@@ -147,7 +146,7 @@ public class SortedInsertion {
         int[] t = new int[getNumber("Enter the length of the array: ",
                 "ERROR. Length must be between '1' and '50'. ",
                 1, 10)];
-        createArray(t, 1, Integer.MAX_VALUE);
+        fillArray(t, 1, Integer.MAX_VALUE);
         bubbleSort(t);
         int newValue = getNumber("Enter a new value to insert in the array: ",
                 "ERROR. Value must be between '1' and '" + Integer.MAX_VALUE
