@@ -38,7 +38,8 @@ public class SortedInsertion {
      * @param max
      * @return
      */
-    static int getNumber(String message, String errorMessage, int min, int max) {
+    static int getNumber(String message, String errorMessage, int min, 
+            int max) {
         int num;
         Scanner sc = new Scanner(System.in);
         do {
@@ -148,9 +149,10 @@ public class SortedInsertion {
                 1, 10)];
         fillArray(t, 1, Integer.MAX_VALUE);
         bubbleSort(t);
-        int newValue = getNumber("Enter a new value to insert in the array: ",
-                "ERROR. Value must be between '1' and '" + Integer.MAX_VALUE
-                + "' . ", 1, Integer.MAX_VALUE);
+        int newValue = getNumber("Enter a new value to insert in the "
+                + "array: ", "ERROR. Value must be between '1' and '" + 
+                        Integer.MAX_VALUE + "' . ", 1, 
+                        Integer.MAX_VALUE);
 
         t = insertSorted(t, newValue);
         System.out.print("The new array, with the new element included "
