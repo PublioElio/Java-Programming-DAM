@@ -145,7 +145,7 @@ public class SortedInsertion {
 
     public static void main(String[] args) {
         int[] t = new int[getNumber("Enter the length of the array: ",
-                "ERROR. Length must be between '1' and '50'. ",
+                "ERROR. Length must be between '1' and '10'. ",
                 1, 10)];
         fillArray(t, 1, Integer.MAX_VALUE);
         bubbleSort(t);
