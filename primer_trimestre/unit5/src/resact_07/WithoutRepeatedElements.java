@@ -3,6 +3,8 @@ package resact_07;
 import java.util.Scanner;
 
 /**
+ * This program asks the user to create an integer array of maximum 15 elements,
+ * then creates a copy of the array, but without repeated elements
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
@@ -56,7 +58,7 @@ public class WithoutRepeatedElements {
 
     /**
      * This function creates a new integer array without repeated elements
-     * 
+     *
      * @param t the array to delete repeated elements
      * @return a new array, without repeated elements
      */
