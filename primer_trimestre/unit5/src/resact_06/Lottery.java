@@ -1,6 +1,5 @@
 package resact_06;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -13,6 +12,40 @@ import java.util.Scanner;
 public class Lottery {
 
     /**
+     * This is a function to swap values in an array
+     *
+     * @param array
+     * @param i first position
+     * @param j second position
+     */
+    public static void swap(int[] array, int i, int j) {
+        int aux = array[i];
+        array[i] = array[j];
+        array[j] = aux;
+    }
+
+    /**
+     * This function sorts an integer array using the bubble method
+     *
+     * @param array
+     */
+    public static void bubbleSort(int[] array) {
+        boolean swapped;
+        int last = 0;
+
+        do {
+            swapped = false;
+            for (int i = 0; i < (array.length - 1 - last); i++) {
+                if (array[i] > array[i + 1]) {
+                    swap(array, i, i + 1);
+                    swapped = true;
+                }
+            }
+            last++;
+        } while (swapped);
+    }
+
+    /**
      * This function generates an array of six random numbers and sorts it
      *
      * @return
@@ -22,7 +55,7 @@ public class Lottery {
         for (int i = 0; i < randomList.length; i++) {
             randomList[i] = (int) ((Math.random() * 11) - 1);
         }
-        Arrays.sort(randomList); // introducir algoritmo de ordenación
+        bubbleSort(randomList);
         return (randomList);
     }
 
