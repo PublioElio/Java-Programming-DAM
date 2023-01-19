@@ -48,7 +48,7 @@ public class WithoutRepeatedElements {
      * @param length the length of the new array
      * @return a new array
      */
-    public static int[] copyOf(int[] src, int length) {
+    static int[] copyOf(int[] src, int length) {
         int[] dest = new int[length];
         for (int i = 0; (i < length) && (i < src.length); i++) {
             dest[i] = src[i];
@@ -77,7 +77,7 @@ public class WithoutRepeatedElements {
      *
      * @param array
      */
-    public static void printArray(int[] array) {
+    static void printArray(int[] array) {
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             if (i == (array.length - 1)) {
