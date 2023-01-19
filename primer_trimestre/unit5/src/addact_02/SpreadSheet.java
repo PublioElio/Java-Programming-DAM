@@ -77,23 +77,16 @@ public class SpreadSheet {
 
     /**
      * This function makes all the calculations in the matrix, adding the total
-     * of each row, column, and then the last row
+     * of each row and column
      *
      * @param t the two-dimension array to calculate
      */
     static void sumAll(int[][] t) {
-        int total = 0;
         for (int i = 0; i < (t.length - 1); i++) {
             sumRow(t, i);
         }
         for (int i = 0; i < t[0].length; i++) {
             sumCol(t, i);
-        }
-        for (int i = 0; i < t[0].length; i++) {
-            total += t[t.length - 1][i];
-            if (i == (t[0].length - 1)) {
-                t[t.length - 1][i] = total;
-            }
         }
     }
 
@@ -105,15 +98,11 @@ public class SpreadSheet {
     static void printMatrix(int t[][]) {
         for (int i = 0; i < t.length; i++) {
             for (int j = 0; j < t[0].length; j++) {
-                if (t[i][j] < 10) {
-                    System.out.print("   " + t[i][j] + " |");
-                } else if (t[i][j] < 100) {
-                    System.out.print("  " + t[i][j] + " |");
-                } else {
-                    System.out.print(" " + t[i][j] + " |");
-                }
+                System.out.print(t[i][j] + "\t");
             }
-            System.out.println("\n-------------------------------------");
+            System.out.println("""
+                               
+                               -------------------------------------------""");
         }
 
     }
