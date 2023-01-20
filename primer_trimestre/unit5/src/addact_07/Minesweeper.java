@@ -52,7 +52,7 @@ public class Minesweeper {
      * @param minefield
      */
     static void printMinefield(char[][] minefield) {
-        System.out.println("\n-------------------------");
+        System.out.println("-------------------------");
         for (int i = 0; i < minefield.length; i++) {
             for (int j = 0; j < minefield[0].length; j++) {
                 if (j == 0) {
@@ -170,11 +170,11 @@ public class Minesweeper {
         boolean winner = false, playing = true;
         do {
             row = getNum("Enter row: ", "ERROR: enter number between "
-                    + "'0' " + "and '" + minefield.length + "'. ",
-                    0, minefield.length) - 1;
+                    + "'1' " + "and '" + minefield.length + "'. ",
+                    1, minefield.length) - 1;
             col = getNum("Enter column: ", "ERROR: enter number between "
-                    + "'0' " + "and '" + minefield[0].length + "'. ",
-                    0, minefield[0].length) - 1;
+                    + "'1' " + "and '" + minefield[0].length + "'. ",
+                    1, minefield[0].length) - 1;
             result = minefield[row][col];
             switch (result) {
                 case 'X' ->
