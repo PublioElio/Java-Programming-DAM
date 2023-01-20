@@ -3,6 +3,7 @@ package addact_07;
 import java.util.Scanner;
 
 /**
+ * This program is a simple version of the game "minesheeper"
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
@@ -100,7 +101,7 @@ public class Minesweeper {
     }
 
     /**
-     * This function checks for mines surrounding a given coordinates in a
+     * This function checks for mines surrounding given coordinates in a
      * two-dimensional character array, and modifyes the map of the player
      *
      * @param minefield the matrix to check
