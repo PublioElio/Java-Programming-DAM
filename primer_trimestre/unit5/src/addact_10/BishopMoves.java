@@ -3,6 +3,8 @@ package addact_10;
 import java.util.Scanner;
 
 /**
+ * This is a program where the user puts a bishop on a chessboard and the
+ * positions it can take are shown
  *
  * @author Adriano Díaz Benítez <Adriano.Díaz>
  */
