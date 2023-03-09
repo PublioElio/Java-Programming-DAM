@@ -40,4 +40,4 @@ This unit introduces the concept of __functions__, the advantages of its use and
 In this topic we work with `arrays` to store multiple values in a variable. We create `arrays` of different types and lengths, in addition to performing the most common operations with `arrays`. Programs that make use of this element will be designed, modifying the length of the `arrays` at runtime without losing the data. Use of the Java API related to `arrays` and apply its use to troubleshooting.
 
 ### Unit 6: Strings
-In this unit we work with the primitive type `char`, using methods and functionalities. Additionally, we use the `String` class, performing advanced operations with text. We will work the _Java API_ to implement applications with text.
+In this unit we work with the primitive type `char`, using methods and functionalities. Additionally, we use the `String` class, performing __advanced operations with text__. We will work the __Java API__ to implement applications with text.
