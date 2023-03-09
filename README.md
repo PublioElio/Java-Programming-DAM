@@ -44,3 +44,6 @@ In this unit we work with the primitive type `char`, using methods and functiona
 
 ### Unit 7: Classes
 This topic introduces the basic concepts of __Object Oriented Programming (OOP)__. We write programs that make use of OOP to solve problems, making it easier for you as a programmer. We will decide if the __attributes__ will be visible or not, for external and neighboring classes.
+
+### Unit 8: Inheritance
+The projects in this unit introduce the concept of __inheritance__, working __classes and superclasses__. We will know the access limitations to the members of a superclass, we will __override methods__, use the main functionalities defined in the `Object` class and use __abstract classes__.
