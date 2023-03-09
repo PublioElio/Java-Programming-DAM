@@ -41,3 +41,6 @@ In this topic we work with `arrays` to store multiple values in a variable. We c
 
 ### Unit 6: Strings
 In this unit we work with the primitive type `char`, using methods and functionalities. Additionally, we use the `String` class, performing __advanced operations with text__. We will work the __Java API__ to implement applications with text.
+
+### Unit 7: Classes
+This topic introduces the basic concepts of __Object Oriented Programming (OOP)__. We write programs that make use of OOP to solve problems, making it easier for you as a programmer. We will decide if the __attributes__ will be visible or not, for external and neighboring classes.
